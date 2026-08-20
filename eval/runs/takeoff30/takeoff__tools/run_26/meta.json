@@ -1,0 +1,92 @@
+{
+  "task": "takeoff",
+  "condition": "tools",
+  "model": null,
+  "effort": null,
+  "max_turns": 120,
+  "max_budget_usd": 8.0,
+  "started_at": "2026-08-18T15:20:55",
+  "n_pages_attached": 0,
+  "tool_calls": {
+    "Bash": 14,
+    "Read": 3
+  },
+  "plan_tools_cmds": {
+    "zoom": 3
+  },
+  "images_viewed": 3,
+  "bash_calls": 14,
+  "n_assistant_messages": 35,
+  "error": null,
+  "answer_source": "structured_output",
+  "subtype": "success",
+  "is_error": false,
+  "terminal_reason": "completed",
+  "num_turns": 21,
+  "duration_ms": 245143,
+  "duration_api_ms": 227178,
+  "total_cost_usd": 2.0799515,
+  "usage": {
+    "input_tokens": 36,
+    "cache_creation_input_tokens": 50382,
+    "cache_read_input_tokens": 2354779,
+    "output_tokens": 15897,
+    "output_tokens_details": {
+      "thinking_tokens": 8539
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 50382,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2730,
+        "cache_read_input_tokens": 156442,
+        "cache_creation_input_tokens": 2736,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2736
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 1057,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001137,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty"
+    },
+    "claude-opus-5[1m]": {
+      "inputTokens": 36,
+      "outputTokens": 15897,
+      "cacheReadInputTokens": 2354779,
+      "cacheCreationInputTokens": 50382,
+      "webSearchRequests": 0,
+      "costUSD": 2.0788145,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty"
+    }
+  },
+  "errors": null,
+  "api_error_status": null,
+  "session_id": "9e9f0202-694f-4390-a6df-f7da3b53e7fb",
+  "wall_seconds": 246.3
+}

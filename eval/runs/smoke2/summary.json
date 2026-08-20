@@ -1,0 +1,50 @@
+[
+  {
+    "task": "dimcheck",
+    "condition": "naive",
+    "n_runs": 1,
+    "n_scored": 1,
+    "n_parsed": 1,
+    "n_errors": 0,
+    "pass_rate": 0.0,
+    "score_mean": 0.3,
+    "score_std": 0.0,
+    "score_min": 0.3,
+    "score_max": 0.3,
+    "cost_usd_mean": 1.051,
+    "cost_usd_std": 0.0,
+    "cost_usd_total": 1.051,
+    "duration_s_mean": 111.653,
+    "turns_mean": 2.0,
+    "tool_calls_mean": 0.0,
+    "images_viewed_mean": 0.0,
+    "plan_tools_usage": {},
+    "models": [
+      "claude-haiku-4-5-20251001",
+      "claude-opus-5[1m]"
+    ],
+    "found_primary_rate": 0.0,
+    "found_primary_or_label_rate": 1.0,
+    "found_chain_sum_rate": 1.0,
+    "found_living_5.86_rate": 0.0,
+    "false_positives_mean": 1.0,
+    "runs_with_false_positives": 1,
+    "other_observations_mean": 1.0,
+    "primary_abs_error_m_mean": 0.055,
+    "primary_measured_values": [
+      3.43
+    ],
+    "n_findings_values": [
+      6
+    ],
+    "answer_agreement": 1.0,
+    "answer_mode": [
+      "area_bad",
+      "area_wohnen",
+      "bedroom_4.00?",
+      "chain_sum",
+      "FP=1"
+    ],
+    "answer_distinct": 1
+  }
+]

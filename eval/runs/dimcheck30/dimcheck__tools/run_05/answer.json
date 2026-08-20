@@ -1,0 +1,71 @@
+{
+  "scale": "1:100",
+  "items_checked": 26,
+  "findings": [
+    {
+      "kind": "dimension chain does not sum to overall",
+      "labeled_value": 10,
+      "unit": "m",
+      "comparison_value": 10.575,
+      "element": "Top dimension chain (30 / 5.86 / 11,5 / 4.00 / 30) vs the 10.00 overall dimension above it",
+      "explanation": "The sub-dimensions add up to 0.30 + 5.86 + 0.115 + 4.00 + 0.30 = 10.575 m, but the overall dimension printed above reads 10.00 m and the drawn outer wall faces measure 10.000 m at 1:100. The chain overshoots by 0.575 m, so it cannot be set out as printed."
+    },
+    {
+      "kind": "wrong dimension label (interior bay too large)",
+      "labeled_value": 5.86,
+      "unit": "m",
+      "comparison_value": 5.8,
+      "element": "Second segment of the top dimension chain (WOHNEN clear width, between inner face of left wall and left face of the 11.5 cm partition)",
+      "explanation": "The extension lines of this segment sit on x = 121.89 pt and x = 286.30 pt; 164.41 pt at 1:100 = 5.800 m. The label says 5.86 m, i.e. 6 cm too much."
+    },
+    {
+      "kind": "wrong dimension label (interior bay too large)",
+      "labeled_value": 4,
+      "unit": "m",
+      "comparison_value": 3.485,
+      "element": "Fourth segment of the top dimension chain (SCHLAFEN/BAD clear width, between right face of the 11.5 cm partition and inner face of right wall)",
+      "explanation": "The extension lines sit on x = 289.56 pt and x = 388.35 pt; 98.79 pt at 1:100 = 3.485 m. The label says 4.00 m, i.e. 0.515 m too much. With the corrected values 5.80 + 3.485 the chain closes exactly on 10.00 m."
+    },
+    {
+      "kind": "wrong room area",
+      "labeled_value": 31.2,
+      "unit": "m2",
+      "comparison_value": 37.1,
+      "element": "WOHNEN room area label",
+      "explanation": "The room is bounded by x = 121.89..286.30 pt and y = 433.70..615.12 pt, i.e. 5.800 m x 6.400 m = 37.12 m2. The label reads 31.2 m2, understating the area by about 5.9 m2 (19%)."
+    },
+    {
+      "kind": "wrong room area",
+      "labeled_value": 13.4,
+      "unit": "m2",
+      "comparison_value": 14.2,
+      "element": "SCHLAFEN room area label",
+      "explanation": "The room is bounded by x = 289.56..388.35 pt and y = 433.70..549.50 pt, i.e. 3.485 m x 4.085 m = 14.24 m2. The label reads 13.4 m2, understating the area by about 0.8 m2."
+    },
+    {
+      "kind": "wrong room area",
+      "labeled_value": 6.9,
+      "unit": "m2",
+      "comparison_value": 7.7,
+      "element": "BAD room area label",
+      "explanation": "The room is bounded by x = 289.56..388.35 pt and y = 552.76..615.12 pt, i.e. 3.485 m x 2.200 m = 7.67 m2. The label reads 6.9 m2, understating the area by about 0.8 m2. The three labelled areas total 51.5 m2, whereas the drawn rooms total 59.0 m2, which matches the interior envelope (9.40 x 6.40 m) less both 11.5 cm partitions - so the geometry is self-consistent and the area labels are the error."
+    },
+    {
+      "kind": "door swing drawn on wrong side of the opening",
+      "labeled_value": null,
+      "unit": "unknown",
+      "comparison_value": null,
+      "element": "Door between WOHNEN and SCHLAFEN, in the 11.5 cm vertical partition",
+      "explanation": "The wall opening is the 1.00 m gap in the partition from y = 504.57 pt to y = 532.91 pt (below the hinge at y = 504.57). The swing symbol, however, is drawn from y = 476.22 to 504.57 pt - the quarter-circle and the closed-leaf radius sit entirely above the hinge, inside solid wall. The leaf's closed position therefore does not coincide with the opening; the swing is mirrored. The other two doors (0.90 m SCHLAFEN/BAD and 1.00 m entrance) have their closed leaf correctly aligned with their openings."
+    },
+    {
+      "kind": "circulation problem: bathroom only reachable through bedroom",
+      "labeled_value": null,
+      "unit": "unknown",
+      "comparison_value": null,
+      "element": "BAD - door openings",
+      "explanation": "BAD has exactly one opening, the 0.90 m door in the horizontal partition into SCHLAFEN. The vertical partition alongside BAD (y = 552.76..615.12 pt) is drawn solid, so there is no door from WOHNEN. The bathroom can only be entered by passing through the bedroom. This is a planning issue rather than a drafting slip, but it should be confirmed as intended before the plan goes out."
+    }
+  ],
+  "summary": "The drawn geometry is internally consistent at 1:100 (10.00 x 7.00 m envelope, 30 cm outer walls, 11.5 cm partitions, 1.00/0.90/1.00 m door openings all measure exactly as labelled), but the annotation on top of it does not match. The top dimension chain overshoots by 0.575 m because 5.86 should read 5.80 and 4.00 should read 3.485, and all three room areas are understated (37.1 / 14.2 / 7.7 m2 drawn vs 31.2 / 13.4 / 6.9 m2 printed). In addition, the WOHNEN-SCHLAFEN door swing is mirrored so the leaf closes into solid wall instead of the opening, and BAD is only reachable through SCHLAFEN - please confirm that last point is intended."
+}

@@ -1,0 +1,95 @@
+{
+  "findings": [
+    {
+      "kind": "dimension chain does not sum to overall dimension",
+      "labeled_value": 10,
+      "unit": "m",
+      "comparison_value": 10.575,
+      "element": "Top horizontal dimension chain (30 / 5.86 / 11.5 / 4.00 / 30) vs. overall 10.00",
+      "explanation": "The sub-dimensions add up to 0.30 + 5.86 + 0.115 + 4.00 + 0.30 = 10.575 m, i.e. 0.575 m more than the overall dimension of 10.00 m printed above them. To close the chain with the printed wall thicknesses and the 4.00 m bay, the WOHNEN segment would have to be 5.285 m, not 5.86 m."
+    },
+    {
+      "kind": "segment width contradicts drawn geometry",
+      "labeled_value": 5.86,
+      "unit": "m",
+      "comparison_value": 5.65,
+      "element": "5.86 m segment (clear width of WOHNEN)",
+      "explanation": "Scaled off the drawing at 1:100, the WOHNEN bay measures roughly 5.6-5.7 m between wall faces, and the right-hand bay roughly 3.6 m rather than 4.00 m. Neither printed value agrees with the graphic, so the chain cannot simply be fixed by trusting the numbers - the geometry and the labels have to be reconciled."
+    },
+    {
+      "kind": "room area inconsistent with dimensions",
+      "labeled_value": 31.2,
+      "unit": "m2",
+      "comparison_value": 37.5,
+      "element": "WOHNEN area label",
+      "explanation": "Clear depth is 7.00 - 0.30 - 0.30 = 6.40 m. With the printed clear width of 5.86 m the area is 5.86 x 6.40 = 37.5 m2. Even with the corrected width needed to close the chain (5.285 m) it would be 33.8 m2. The printed 31.2 m2 corresponds to a width of only 4.88 m and matches no dimension on the plan."
+    },
+    {
+      "kind": "room area inconsistent with dimensions",
+      "labeled_value": 13.4,
+      "unit": "m2",
+      "comparison_value": 15.4,
+      "element": "SCHLAFEN area label",
+      "explanation": "With the printed bay width of 4.00 m and the drawn clear depth of about 3.85 m the room is about 15.4 m2. 13.4 m2 implies a depth of only 3.35 m, which does not match the partition position shown."
+    },
+    {
+      "kind": "room area inconsistent with dimensions",
+      "labeled_value": 6.9,
+      "unit": "m2",
+      "comparison_value": 9,
+      "element": "BAD area label",
+      "explanation": "With the printed bay width of 4.00 m and the drawn clear depth of about 2.25 m the room is about 9.0 m2. 6.9 m2 implies a depth of only 1.73 m."
+    },
+    {
+      "kind": "areas do not fill the available depth",
+      "labeled_value": 6.4,
+      "unit": "m",
+      "comparison_value": 5.19,
+      "element": "SCHLAFEN + BAD stack in the right bay",
+      "explanation": "Back-calculating depths from the printed areas at the printed bay width of 4.00 m gives 3.35 m (SCHLAFEN) + 1.73 m (BAD) + 0.115 m partition = 5.19 m, but the clear depth available between the outer walls is 6.40 m. About 1.2 m of the building depth is unaccounted for."
+    },
+    {
+      "kind": "area balance does not close against gross footprint",
+      "labeled_value": 70,
+      "unit": "m2",
+      "comparison_value": 62.5,
+      "element": "Sum of all room areas plus wall footprint vs. 10.00 x 7.00 building",
+      "explanation": "Gross footprint is 10.00 x 7.00 = 70.0 m2. Labelled rooms total 31.2 + 13.4 + 6.9 = 51.5 m2; the 0.30 m perimeter walls take about 9.8 m2 and the internal partitions about 1.2 m2, giving roughly 62.5 m2. About 7.5 m2 is missing, confirming the area labels as a set are too small."
+    },
+    {
+      "kind": "missing door / access",
+      "labeled_value": null,
+      "unit": "unknown",
+      "comparison_value": null,
+      "element": "BAD",
+      "explanation": "Two door swings are drawn in the vertical partition between WOHNEN and SCHLAFEN (one at the top, one just above the SCHLAFEN/BAD partition), but there is no opening anywhere in the walls enclosing BAD. As drawn the bathroom cannot be entered; the lower door appears to have been placed one segment too high - it should sit in the BAD portion of the partition."
+    },
+    {
+      "kind": "missing openings / daylight",
+      "labeled_value": null,
+      "unit": "unknown",
+      "comparison_value": null,
+      "element": "All exterior walls",
+      "explanation": "No windows are shown at all. WOHNEN and SCHLAFEN are habitable rooms and require daylight and ventilation openings; the only opening on the plan is the entrance door in the bottom wall of WOHNEN. Either the window symbols are missing or the openings still have to be designed."
+    },
+    {
+      "kind": "overall dimension inconsistent with drawn size",
+      "labeled_value": 7,
+      "unit": "m",
+      "comparison_value": 6.75,
+      "element": "Left vertical overall dimension",
+      "explanation": "Measured against the horizontal 10.00 m dimension, the building box is drawn roughly 6.7-6.8 m deep rather than 7.00 m, i.e. the drawing is not uniformly to 1:100 in both directions. This is a graphic measurement and carries some tolerance, but it should be verified in the CAD model together with the area labels, which are also systematically too small."
+    },
+    {
+      "kind": "unit convention not annotated",
+      "labeled_value": 11.5,
+      "unit": "cm",
+      "comparison_value": null,
+      "element": "Dimension chain values 30, 11.5, 30",
+      "explanation": "Metre values (5.86, 4.00, 10.00) and centimetre values (30, 11.5) are mixed in the same chain with no unit note. This is a common convention for wall thicknesses, but with the chain already not adding up the contractor has no way to tell whether 11.5 means 0.115 m or something else. Add a unit note or write the thicknesses as 0.30 / 0.115."
+    }
+  ],
+  "items_checked": 21,
+  "scale": "1:100",
+  "summary": "This sheet is not ready for the contractor: the horizontal dimension chain overruns the overall dimension by 0.575 m (10.575 vs 10.00), and none of the three area labels agree with the dimensions - the labelled areas total roughly 7.5 m2 less than the 10.00 x 7.00 footprint can account for. The BAD also has no door (both door swings sit in the WOHNEN/SCHLAFEN partition), and no windows are shown anywhere. Please re-derive the chain and the areas from the CAD geometry, decide whether the WOHNEN bay is 5.29 m or 5.86 m, and re-issue."
+}

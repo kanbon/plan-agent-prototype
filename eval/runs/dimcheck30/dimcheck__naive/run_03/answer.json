@@ -1,0 +1,47 @@
+{
+  "findings": [
+    {
+      "kind": "dimension chain does not add up to the overall dimension",
+      "labeled_value": 10,
+      "unit": "m",
+      "comparison_value": 10.575,
+      "element": "Top horizontal dimension line: 30 / 5.86 / 11,5 / 4.00 / 30 against overall 10.00",
+      "explanation": "The sub-dimensions sum to 0.30 + 5.86 + 0.115 + 4.00 + 0.30 = 10.575 m, which is 0.575 m more than the stated overall length of 10.00 m. The chain must be corrected so it closes on 10.00 m."
+    },
+    {
+      "kind": "individual dimension inconsistent with drawn geometry",
+      "labeled_value": 4,
+      "unit": "m",
+      "comparison_value": 3.425,
+      "element": "Top dimension line, segment for the SCHLAFEN/BAD block (labelled 4.00)",
+      "explanation": "Scaling the drawing, this room block is drawn roughly 3.4-3.5 m wide, while the WOHNEN segment matches its 5.86 m label. To close the chain against the 10.00 m overall (10.00 - 0.30 - 5.86 - 0.115 - 0.30), this segment must be 3.425 m. The 4.00 m label is the source of the 0.575 m chain error."
+    },
+    {
+      "kind": "room area label does not match its dimensions",
+      "labeled_value": 31.2,
+      "unit": "m2",
+      "comparison_value": 37.5,
+      "element": "WOHNEN area label",
+      "explanation": "WOHNEN spans the full interior depth: 7.00 - 2 x 0.30 = 6.40 m, and its labelled width is 5.86 m. 5.86 x 6.40 = 37.50 m2, not 31.2 m2 - a shortfall of about 6.3 m2 (20%)."
+    },
+    {
+      "kind": "room area label does not match its dimensions",
+      "labeled_value": 6.9,
+      "unit": "m2",
+      "comparison_value": 7.9,
+      "element": "BAD area label",
+      "explanation": "With the corrected block width of 3.425 m and the drawn depth of about 2.30 m (6.40 m interior depth less the 4.00 m SCHLAFEN depth and the ~0.10 m partition), BAD is about 7.9 m2, not 6.9 m2. The corrected areas (37.5 + 13.7 + 7.9) plus partitions fill the 60.16 m2 interior exactly, whereas the labelled areas total only 51.5 m2."
+    },
+    {
+      "kind": "room without access / missing door",
+      "labeled_value": null,
+      "unit": "unknown",
+      "comparison_value": null,
+      "element": "BAD (bathroom)",
+      "explanation": "Two door swings are drawn, both in the partition between WOHNEN and the right-hand block, and both above the SCHLAFEN/BAD dividing wall - i.e. both open into SCHLAFEN. BAD is otherwise enclosed by the dividing wall and the two exterior walls, so as drawn it has no door and cannot be entered. Add a door to BAD (or move the lower swing below the dividing wall)."
+    }
+  ],
+  "items_checked": 16,
+  "scale": "1:100",
+  "summary": "The horizontal dimension chain does not close: 0.30 + 5.86 + 0.115 + 4.00 + 0.30 = 10.575 m against a stated overall of 10.00 m; the drawn geometry shows the 4.00 m segment is the culprit and should read 3.425 m. Two area labels are also wrong - WOHNEN should be 37.5 m2 (5.86 x 6.40), not 31.2 m2, and BAD should be about 7.9 m2, not 6.9 m2; only SCHLAFEN (13.4 vs ~13.7 m2) is within rounding. Finally, both door swings are drawn opening into SCHLAFEN, leaving BAD with no door at all - please add one before this goes to the contractor."
+}

@@ -1,0 +1,55 @@
+{
+  "findings": [
+    {
+      "kind": "dimension chain does not sum to overall dimension",
+      "labeled_value": 10,
+      "unit": "m",
+      "comparison_value": 10.575,
+      "element": "Top horizontal dimension line (overall 10.00 vs. sub-chain 30 / 5.86 / 11,5 / 4.00 / 30)",
+      "explanation": "The individual segments add up to 0.30 + 5.86 + 0.115 + 4.00 + 0.30 = 10.575 m, which is 0.575 m more than the overall dimension of 10.00 m printed above them. The chain must close on the overall dimension."
+    },
+    {
+      "kind": "individual dimension inconsistent with drawn geometry",
+      "labeled_value": 4,
+      "unit": "m",
+      "comparison_value": 3.43,
+      "element": "Sub-dimension '4.00' (clear width of SCHLAFEN / BAD block)",
+      "explanation": "The 5.86 segment scales correctly against the 10.00 overall (both consistent with the drawn geometry), so the error sits in the 4.00 segment. Back-calculated: 10.00 - 0.30 - 5.86 - 0.115 - 0.30 = 3.43 m. Scaling the right-hand block off the drawing gives roughly 3.4-3.5 m, not 4.00 m. This is the single value that makes the chain fail."
+    },
+    {
+      "kind": "room area does not match dimensions",
+      "labeled_value": 31.2,
+      "unit": "m2",
+      "comparison_value": 37.5,
+      "element": "WOHNEN area label",
+      "explanation": "WOHNEN spans the full clear depth of the building: 7.00 - 0.30 - 0.30 = 6.40 m, and its clear width is the dimensioned 5.86 m. 5.86 x 6.40 = 37.5 m2, roughly 20% more than the labeled 31.2 m2. The drawn room matches 37.5 m2, so the area text is wrong, not the geometry."
+    },
+    {
+      "kind": "room area does not match dimensions / areas do not sum",
+      "labeled_value": 6.9,
+      "unit": "m2",
+      "comparison_value": 8,
+      "element": "BAD area label",
+      "explanation": "The right-hand block has a clear width of 3.425 m (see the 4.00 finding) and a clear depth of 6.40 m, i.e. 21.9 m2, less the 11.5 cm horizontal partition (0.39 m2) = 21.5 m2 to be shared by SCHLAFEN and BAD. SCHLAFEN's labeled 13.4 m2 is consistent with the drawing, which leaves about 8.0 m2 for BAD, not 6.9 m2. Scaling BAD directly off the drawing gives about 3.4 x 2.3 = 7.8-8.0 m2. The three area labels sum to 51.5 m2 where roughly 59 m2 of net floor area is available."
+    },
+    {
+      "kind": "inconsistent units and decimal separator in dimension chain",
+      "labeled_value": 11.5,
+      "unit": "cm",
+      "comparison_value": 0.115,
+      "element": "Sub-dimension '11,5' (interior partition thickness)",
+      "explanation": "This value uses a decimal comma and centimetre units while every neighbouring value in the same chain uses a decimal point and metres (5.86, 4.00, 10.00). Sitting next to '4.00' it can be misread as 11.5 m. Note also that the two 30s are centimetres in the same chain. Use one convention throughout, e.g. 0.30 / 5.86 / 0.115 / 3.43 / 0.30."
+    },
+    {
+      "kind": "missing openings / incomplete drawing for construction",
+      "labeled_value": null,
+      "unit": "unknown",
+      "comparison_value": null,
+      "element": "Exterior walls of WOHNEN, SCHLAFEN and BAD",
+      "explanation": "The building envelope contains only the single entrance door at the bottom left. No windows are drawn in any room, so WOHNEN and SCHLAFEN (habitable rooms) have no daylight or natural ventilation, and BAD has no ventilation opening. There is also no north arrow and no door/opening dimensions. As issued this sheet is not buildable."
+    }
+  ],
+  "items_checked": 19,
+  "scale": "1:100",
+  "summary": "The sheet has one geometric error that cascades: the top dimension chain sums to 10.575 m against an overall of 10.00 m, and the offending segment is the '4.00' width of the SCHLAFEN/BAD block, which should read about 3.43 m. Two area labels are also wrong — WOHNEN should be about 37.5 m2 rather than 31.2 m2, and BAD about 8.0 m2 rather than 6.9 m2; the labeled areas total 51.5 m2 where roughly 59 m2 is available. Please also normalise the mixed cm/m and comma/point notation in the dimension chain, and add windows, opening dimensions and a north arrow before this goes to the contractor."
+}

@@ -1,0 +1,133 @@
+{
+  "supply_diffusers": [
+    {
+      "tag": "A",
+      "count": 5,
+      "size": "6\" round neck (24x24 lay-in panel)",
+      "model": "Price SCD",
+      "mount": "ceiling",
+      "cfm_values": [
+        75,
+        75,
+        75,
+        90,
+        130
+      ]
+    },
+    {
+      "tag": "B",
+      "count": 4,
+      "size": "8\" round neck (24x24 lay-in panel)",
+      "model": "Price SCD",
+      "mount": "ceiling",
+      "cfm_values": [
+        150,
+        150,
+        140,
+        140
+      ]
+    },
+    {
+      "tag": "C",
+      "count": 15,
+      "size": "10\" round neck (24x24 lay-in panel)",
+      "model": "Price SCD",
+      "mount": "ceiling",
+      "cfm_values": [
+        250,
+        200,
+        250,
+        250,
+        250,
+        200,
+        350,
+        350,
+        350,
+        300,
+        375,
+        375,
+        300,
+        375,
+        375
+      ]
+    },
+    {
+      "tag": "D",
+      "count": 1,
+      "size": "12\" round neck (24x24 lay-in panel)",
+      "model": "Price SCD",
+      "mount": "ceiling",
+      "cfm_values": [
+        500
+      ]
+    },
+    {
+      "tag": "J",
+      "count": 3,
+      "size": "12 x 12 face, 8\" round neck",
+      "model": "Price SMD",
+      "mount": "ceiling",
+      "cfm_values": [
+        175,
+        150,
+        150
+      ]
+    }
+  ],
+  "supply_diffuser_total": 28,
+  "return_exhaust_grilles": [
+    {
+      "tag": "F",
+      "count": 3,
+      "size": "24\" x 24\" core (24x24 lay-in panel, core-only)"
+    },
+    {
+      "tag": "E",
+      "count": 4,
+      "size": "30 x 18 (approx. - field verify per M101 note 7)"
+    },
+    {
+      "tag": "G",
+      "count": 4,
+      "size": "36 x 36"
+    }
+  ],
+  "exhaust_fans": [
+    {
+      "tag": "EF-1",
+      "model": "Greenheck SPA-700",
+      "cfm": 450
+    },
+    {
+      "tag": "EF-2",
+      "model": "Greenheck SPA-700",
+      "cfm": 450
+    },
+    {
+      "tag": "EF-3",
+      "model": "Greenheck SP-B90",
+      "cfm": 75
+    }
+  ],
+  "total_supply_cfm": 6550,
+  "excluded_false_positives": [
+    "E (x4): Price 95, 30x18 - schedule note 11 = heavy-duty SIDEWALL grille; M101 note 7 confirms wall-mounted return. Not a ceiling vent - listed separately.",
+    "G (x4): Price 95, 36x36 - M101 note 3 = '36 X 36 SIDEWALL TRANSFER GRILLE', top elev. 14'-8\" AFF. Wall, not ceiling.",
+    "H (x3): Price 520D 18x8, 550 CFM ea - schedule note 10 = double-deflection SIDEWALL supply register. Wall, not ceiling.",
+    "I (x4): Price 520D 14x8, 450 CFM ea - THROW column reads 'SIDEWALL'. Wall, not ceiling.",
+    "'F' at 1615,354 and 1570,364 on M101: part of the room names 'TLT F 121' and 'SHOWERS F 122', not a grille tag.",
+    "'D' at 1516,302 on M101: part of the pipe label '3/4\" D' (D = condensate drain piping per M601 legend).",
+    "'G' at 2073,609 on M101: gas piping line label (--G--), not a grille tag.",
+    "Letters A-J found at x>2400: text inside the title block / engineer's seal / sheet notes, outside the drawing area.",
+    "Hexagon tags with a blank (dashed) tag field over 450/450/75 CFM: these are EF-1/EF-2/EF-3 ceiling exhaust fans, which come with an integral grille - no separate grille to order.",
+    "Untagged square symbol at ~2045,791 in CRAFT 114/KILNS 115: kiln hood/plumbing fixture, not an air device.",
+    "Gymnasium 127 and the whole west half of the building: no new air devices tagged - existing to remain."
+  ],
+  "sheets_used": [
+    "M601",
+    "M101",
+    "MD101",
+    "M501"
+  ],
+  "summary": "Buy 31 ceiling air devices: 28 ceiling supply diffusers + 3 ceiling return grilles. All are Price (or approved equal), all new — M101 notes 2, 7, 8 and 9 all call for \"new supply grille(s)\" / \"new grilles,\" so nothing is being reused.\n\nCEILING SUPPLY DIFFUSERS — 28 total. Tags A–D are all the same product, Price SCD: louvered-face square 4-cone steel ceiling diffuser, white, fixed 4-way (360°) discharge, in a 24\"x24\" panel for lay-in ceiling, with a radial balancing damper in the neck (Price VCR9 or equal), NC ≤ 35. They differ only by neck size:\n  • A — 6\" round neck — 5 ea (75, 75, 75, 90, 130 CFM)\n  • B — 8\" round neck — 4 ea (150, 150, 140, 140 CFM)\n  • C — 10\" round neck — 15 ea (250, 200, 250, 250, 250, 200, 350, 350, 350, 300, 375, 375, 300, 375, 375 CFM)\n  • D — 12\" round neck — 1 ea (500 CFM, KILNS 115)\n  • J — Price SMD, 12\"x12\" face with 8\" round neck, white, 4-way, high-capacity louvered face, opposed-blade damper, FLANGED FRAME for surface mounting (hard ceiling, not lay-in) — 3 ea (175, 150, 150 CFM, in the toilet/shower area)\nTotal ceiling supply air = 6,550 CFM.\n\nCEILING RETURN GRILLES — 3 total:\n  • F — Price 80, 24\"x24\" core-only egg-crate (1/2\"x1/2\"x1/2\" aluminum), white, in a 24x24 lay-in panel, NC ≤ 35 — 3 ea. No CFM scheduled. Per M101 note 4, provide a new 24\"x24\" lined (1/2\" liner) plenum atop each one.\n\nCEILING EXHAUST — do NOT order grilles for these. The three ceiling exhaust points (2 @ 450 CFM in the toilets, 1 @ 75 CFM) are Greenheck centrifugal ceiling exhaust fans EF-1/EF-2 (SPA-700) and EF-3 (SP-B90), which per the schedule come with an integral grille.\n\nNOT CEILING — priced separately if your scope includes them: E (Price 95, 30x18, primecoat, heavy-duty sidewall return, 4 ea — note 7 says the engineer could not field-measure these, so field verify before ordering), G (Price 95, 36x36, primecoat, sidewall transfer grille at 14'-8\" AFF, 4 ea), H (Price 520D, 18x8, double-deflection sidewall supply, 550 CFM ea, 3 ea), I (Price 520D, 14x8, double-deflection sidewall supply, 450 CFM ea, 4 ea). Also one 14\"x14\" egg-crate (Price model 82) mounted in a soffit with insect screen per M101 note 19 — soffit, not ceiling.\n\nCoordination flags: M601 general note 3 requires ceiling register locations to be coordinated with the lighting layout, sprinkler heads and ceiling grid — check the architectural RCP before you set them. A/B/C/D and F are lay-in (24x24 module); J is surface-mount flanged, so confirm the ceiling type in the rooms it serves before ordering.\n\nSheets used: M601 (Mechanical Legend & Schedules — GRILLES schedule, EXHAUST FANS schedule, general notes), M101 (Mechanical New Work Floor Plan — device count, CFM, sheet notes 1–28), MD101 (Mechanical Demolition Floor Plan — confirmed no reused devices), M501 (Mechanical Details)."
+}

@@ -1,0 +1,40 @@
+{
+  "task": "dimcheck",
+  "parsed": true,
+  "found_primary": true,
+  "found_primary_label_only": false,
+  "primary_measured_m": 3.485,
+  "primary_abs_error_m": 0.0,
+  "found_living_5.86": true,
+  "found_chain_sum": true,
+  "found_door_swing": true,
+  "area_findings": 3,
+  "other_observations": 1,
+  "false_positives": 1,
+  "flagged_correct_dimensions": [
+    "inner wall"
+  ],
+  "n_findings": 9,
+  "dimensions_checked": 22,
+  "scale_ok": true,
+  "matched_ids": [
+    "area_bad",
+    "area_schlafen",
+    "area_wohnen",
+    "bedroom_4.00",
+    "chain_sum",
+    "door_swing",
+    "living_5.86"
+  ],
+  "unmatched": [
+    {
+      "kind": "inconsistent decimal separator / unit notation",
+      "labeled": 11.5,
+      "unit": "cm",
+      "comparison": null,
+      "element": "Top dimension chain, third segment label \"11,5\""
+    }
+  ],
+  "score": 0.9,
+  "pass": false
+}

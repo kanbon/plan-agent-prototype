@@ -1,0 +1,19 @@
+{
+  "cmd": "run",
+  "task": [
+    "dimcheck"
+  ],
+  "condition": [
+    "tools",
+    "naive"
+  ],
+  "n": 30,
+  "parallel": 15,
+  "model": null,
+  "effort": null,
+  "max_turns": 120,
+  "max_budget": 8.0,
+  "batch": "dimcheck30",
+  "force": false,
+  "verbose": false
+}

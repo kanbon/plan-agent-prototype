@@ -1,0 +1,117 @@
+{
+  "supply_diffusers": [
+    {
+      "tag": "A",
+      "count": 5,
+      "size": "6\" round neck, 24x24 lay-in panel",
+      "model": "Price SCD, white",
+      "mount": "ceiling",
+      "cfm_values": [
+        75,
+        75,
+        75,
+        90,
+        130
+      ]
+    },
+    {
+      "tag": "B",
+      "count": 4,
+      "size": "8\" round neck, 24x24 lay-in panel",
+      "model": "Price SCD, white",
+      "mount": "ceiling",
+      "cfm_values": [
+        150,
+        150,
+        140,
+        140
+      ]
+    },
+    {
+      "tag": "C",
+      "count": 15,
+      "size": "10\" round neck, 24x24 lay-in panel",
+      "model": "Price SCD, white",
+      "mount": "ceiling",
+      "cfm_values": [
+        250,
+        200,
+        250,
+        250,
+        250,
+        200,
+        350,
+        350,
+        350,
+        300,
+        375,
+        375,
+        300,
+        375,
+        375
+      ]
+    },
+    {
+      "tag": "D",
+      "count": 1,
+      "size": "12\" round neck, 24x24 lay-in panel",
+      "model": "Price SCD, white",
+      "mount": "ceiling",
+      "cfm_values": [
+        500
+      ]
+    },
+    {
+      "tag": "J",
+      "count": 3,
+      "size": "12x12 face with 8\" round inlet",
+      "model": "Price SMD, white",
+      "mount": "ceiling",
+      "cfm_values": [
+        175,
+        150,
+        150
+      ]
+    }
+  ],
+  "supply_diffuser_total": 28,
+  "return_exhaust_grilles": [
+    {
+      "tag": "F",
+      "count": 3,
+      "size": "24\" x 24\" core (core-only panel for lay-in ceiling)"
+    }
+  ],
+  "exhaust_fans": [
+    {
+      "tag": "EF-1",
+      "model": "Greenheck SPA-700",
+      "cfm": 450
+    },
+    {
+      "tag": "EF-2",
+      "model": "Greenheck SPA-700",
+      "cfm": 450
+    },
+    {
+      "tag": "EF-3",
+      "model": "Greenheck SP-B90",
+      "cfm": 75
+    }
+  ],
+  "total_supply_cfm": 6550,
+  "excluded_false_positives": [
+    "Types E (4 ea, Price 95, 30x18) and G (4 ea, Price 95, 36x36): scheduled note 11 = heavy-duty steel SIDEWALL grille, 0 deg deflection; M101 note 3 calls G a 36x36 sidewall transfer grille at 14'-8\" AFF. Wall-mounted, not ceiling.",
+    "Types H (3 ea, Price 520D, 18x8) and I (4 ea, Price 520D, 14x8): scheduled note 10 = double-deflection SIDEWALL grille; I also shows THROW = SIDEWALL. Wall registers, not ceiling.",
+    "3 hexagon tags with a dash instead of a letter (450/450/75 CFM) next to EF-1/EF-2/EF-3: these are the ceiling exhaust fans, which per EF schedule note 1 come with an INTEGRAL grille - do not order a separate grille.",
+    "M101 note 19: one 14x14 egg crate, Price model 82, mounted in exterior SOFFIT with insect screen (outside-air intake at end of OA duct). Untagged/not in the grille schedule and not a room ceiling vent - buy it separately if you are pricing note 19.",
+    "Letters A-J picked up in the engineer's registration seal and title block (x > 2400 pt) - 'JAMES A. ANDREWS, JR. / REGISTERED PROFESSIONAL ENGINEER' set as individual glyphs.",
+    "Letters in room names ('TLT F', 'SHOWERS F', 'SHOWERS M') and the condensate note '3/4\" D' - smaller text height (6-8 pt vs 12 pt tag text), and no hexagon symbol around them."
+  ],
+  "sheets_used": [
+    "M101",
+    "M601",
+    "MD101"
+  ],
+  "summary": "You need 31 ceiling air devices total: 28 ceiling supply diffusers and 3 ceiling return/exhaust grilles. All of them are Price, and all counts come off M101 (Mechanical New Work Floor Plan), with the model/size data off the GRILLES schedule on M601.\n\nSUPPLY - Price SCD, louvered-face square 4-cone steel ceiling diffuser, fixed 360 deg 4-way pattern, white, set in a 24x24 panel for lay-in ceiling, with factory insulated backpan and a radial balancing damper (Price VCR9 or equal) in the neck:\n- Type A, 6\" round neck - 5 ea\n- Type B, 8\" round neck - 4 ea\n- Type C, 10\" round neck - 15 ea\n- Type D, 12\" round neck - 1 ea\n\nSUPPLY - Price SMD, louvered-face high-capacity steel ceiling diffuser, 4-way, white, 12x12 face with 8\" round inlet, flanged frame for surface mounting, opposed blade damper:\n- Type J - 3 ea\n\nRETURN/EXHAUST - Price 80, all-aluminum 1/2\" x 1/2\" x 1/2\" egg crate, white, 24\" x 24\" core-only panel for lay-in ceiling, opposed blade damper:\n- Type F - 3 ea\n(Note M101 note 4: provide a new 24x24 lined (1\" liner) plenum atop the new egg crate return grille.)\n\nTotal ceiling supply air is 6,550 CFM. NC not to exceed 35 on all devices.\n\nWATCH OUT - these are on the same schedule but are NOT ceiling vents, so do not roll them into a ceiling-diffuser buy: Type E (4 ea, Price 95, 30x18), Type G (4 ea, Price 95, 36x36), Type H (3 ea, Price 520D, 18x8) and Type I (4 ea, Price 520D, 14x8) are all sidewall grilles/registers - 15 wall units in primecoat finish, and E, G, H, I all get 2 coats of field paint (verify color with the architect). Field-verify E and I sizes before ordering (starred in the schedule); M101 note 7 says the engineer could not field-measure the existing return openings and the 30x18 is approximate.\n\nALSO: the three ceiling exhaust fans (EF-1 and EF-2, Greenheck SPA-700 at 450 CFM; EF-3, Greenheck SP-B90 at 75 CFM) show up on the plan as ceiling openings, but per the exhaust fan schedule they are centrifugal ceiling fans WITH INTEGRAL GRILLE - no separate grille to buy. And M101 note 19 calls for one 14x14 egg crate, Price model 82, with insect screen, mounted in an exterior soffit as an outside-air intake - it has no schedule tag, so price it as a separate line item.\n\nCoordinate all ceiling device locations with the lighting layout, sprinkler heads and ceiling grid per M601 general note 3 - the architectural reflected ceiling plan (A6-1) governs exact locations."
+}

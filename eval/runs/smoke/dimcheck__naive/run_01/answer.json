@@ -1,0 +1,39 @@
+{
+  "scale": "1:100",
+  "dimensions_checked": 10,
+  "findings": [
+    {
+      "kind": "chain_sum_mismatch",
+      "labeled_value": 10,
+      "unit": "m",
+      "comparison_value": 10.575,
+      "element": "top dimension chain (30 / 5.86 / 11.5 / 4.00 / 30) vs overall width 10.00",
+      "explanation": "Reading 30 and 11.5 as cm wall thicknesses, the chain sums to 0.30 + 5.86 + 0.115 + 4.00 + 0.30 = 10.575 m, which is 0.575 m more than the printed overall 10.00 m. The individual wall thicknesses do check out against the drawing (outer walls ~0.30 m, partition ~0.115 m), so the error sits in one of the room segments, not the walls."
+    },
+    {
+      "kind": "dimension_mismatch",
+      "labeled_value": 4,
+      "unit": "m",
+      "comparison_value": 3.44,
+      "element": "right room segment (SCHLAFEN / BAD width) in top chain",
+      "explanation": "The segment between the 11.5 cm partition and the inner face of the right outer wall measures ~130 px = 3.44 m, not 4.00 m. The left segment (5.86 m label) measures ~218 px = 5.80 m, i.e. it is drawn as labeled within measurement tolerance, so the 4.00 is the offending label. Closing the chain against the 10.00 m overall requires 10.00 - 0.30 - 5.86 - 0.115 - 0.30 = 3.425 m, which agrees with the measured geometry."
+    },
+    {
+      "kind": "area_mismatch",
+      "labeled_value": 31.2,
+      "unit": "m2",
+      "comparison_value": 37.5,
+      "element": "WOHNEN room area",
+      "explanation": "Clear interior of WOHNEN is 5.86 m (label, confirmed by measurement ~5.80 m) x 6.40 m (7.00 minus two 0.30 m walls) = 37.5 m2 (37.1 m2 using the measured width). The printed 31.2 m2 would imply a room width of only 4.88 m, which is not what is drawn."
+    },
+    {
+      "kind": "area_mismatch",
+      "labeled_value": 6.9,
+      "unit": "m2",
+      "comparison_value": 7.85,
+      "element": "BAD room area",
+      "explanation": "BAD measures ~3.44 m wide x ~2.29 m deep (from the 11.5 cm horizontal partition to the inner face of the bottom wall) = ~7.85 m2; even on the chain-consistent width of 3.425 m it is ~7.8 m2. The printed 6.9 m2 implies a depth of only 2.01 m. Cross-check: SCHLAFEN's 13.4 m2 is consistent (3.44 x 3.97 = 13.7 m2), but 13.4 + 6.9 = 20.3 m2 leaves the right-hand column ~1.2 m2 short of the ~21.5 m2 actually enclosed, so BAD is the label that does not close. This is the least certain of the four (label-to-geometry gap ~14%, versus ~3% scatter on the items I consider correct) - worth a re-check against the model rather than assumed to be a pure typo."
+    }
+  ],
+  "summary": "Four problems, all on the right-hand side of the plan. The top chain (30 / 5.86 / 11.5 / 4.00 / 30) sums to 10.575 m against a printed overall of 10.00 m, and the drawn geometry shows the culprit is the 4.00 m segment: the SCHLAFEN/BAD column scales at ~3.44 m, matching the 3.425 m needed to close the chain. Separately, WOHNEN is labelled 31.2 m2 but its drawn clear dimensions (5.86 x 6.40) give ~37.5 m2, and BAD's 6.9 m2 is about 0.9 m2 short of the ~7.8 m2 enclosed. The 7.00 m overall depth, both 30 cm outer walls, the 11.5 cm partition, the 5.86 m WOHNEN width and SCHLAFEN's 13.4 m2 all check out; please fix the 4.00 m label and re-derive the area schedule before issuing to the contractor."
+}

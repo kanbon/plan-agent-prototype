@@ -1,0 +1,162 @@
+{
+  "supply_diffusers": [
+    {
+      "tag": "A",
+      "count": 5,
+      "size": "6\" round neck (24x24 lay-in panel)",
+      "model": "Price SCD, white, 4-way",
+      "mount": "ceiling",
+      "cfm_values": [
+        75,
+        75,
+        75,
+        90,
+        130
+      ]
+    },
+    {
+      "tag": "B",
+      "count": 4,
+      "size": "8\" round neck (24x24 lay-in panel)",
+      "model": "Price SCD, white, 4-way",
+      "mount": "ceiling",
+      "cfm_values": [
+        150,
+        150,
+        140,
+        140
+      ]
+    },
+    {
+      "tag": "C",
+      "count": 15,
+      "size": "10\" round neck (24x24 lay-in panel)",
+      "model": "Price SCD, white, 4-way",
+      "mount": "ceiling",
+      "cfm_values": [
+        250,
+        250,
+        250,
+        250,
+        200,
+        200,
+        300,
+        300,
+        350,
+        350,
+        350,
+        375,
+        375,
+        375,
+        375
+      ]
+    },
+    {
+      "tag": "D",
+      "count": 1,
+      "size": "12\" round neck (24x24 lay-in panel)",
+      "model": "Price SCD, white, 4-way",
+      "mount": "ceiling",
+      "cfm_values": [
+        500
+      ]
+    },
+    {
+      "tag": "J",
+      "count": 3,
+      "size": "12x12 face, 8\" round neck",
+      "model": "Price SMD, white, 4-way, flanged frame for surface mounting",
+      "mount": "ceiling",
+      "cfm_values": [
+        175,
+        150,
+        150
+      ]
+    },
+    {
+      "tag": "H",
+      "count": 3,
+      "size": "18x8",
+      "model": "Price 520D double-deflection sidewall grille, primecoat",
+      "mount": "sidewall",
+      "cfm_values": [
+        550,
+        550,
+        550
+      ]
+    },
+    {
+      "tag": "I",
+      "count": 4,
+      "size": "14x8",
+      "model": "Price 520D double-deflection sidewall grille, primecoat (field verify size before ordering)",
+      "mount": "sidewall",
+      "cfm_values": [
+        450,
+        450,
+        450,
+        450
+      ]
+    }
+  ],
+  "supply_diffuser_total": 35,
+  "return_exhaust_grilles": [
+    {
+      "tag": "F",
+      "count": 3,
+      "size": "24\"x24\" (core only, lay-in ceiling panel)"
+    },
+    {
+      "tag": "E",
+      "count": 4,
+      "size": "30x18 (sidewall return, field verify exact size before ordering)"
+    },
+    {
+      "tag": "G",
+      "count": 4,
+      "size": "36x36 (sidewall transfer grille, top el. 14'-8\" AFF)"
+    },
+    {
+      "tag": "Keynote 19 (no schedule tag)",
+      "count": 1,
+      "size": "14x14 eggcrate, Price model 82, mounted in soffit w/ insect screen"
+    }
+  ],
+  "exhaust_fans": [
+    {
+      "tag": "EF-1",
+      "model": "Greenheck SPA-700 (ceiling exhaust fan, integral grille)",
+      "cfm": 450
+    },
+    {
+      "tag": "EF-2",
+      "model": "Greenheck SPA-700 (ceiling exhaust fan, integral grille)",
+      "cfm": 450
+    },
+    {
+      "tag": "EF-3",
+      "model": "Greenheck SP-B90 (ceiling exhaust fan, integral grille)",
+      "cfm": 75
+    }
+  ],
+  "total_supply_cfm": 10000,
+  "excluded_false_positives": [
+    "Hexagon tags containing only '450', '450' and '75' (M101 at ~x1629/y316, x1749/y305, x1677/y510): these are exhaust-fan airflow tags adjacent to EF-1/EF-2/EF-3, not grille tags",
+    "'F' at 'TLT. F' (121) and 'SHOWERS F' (122): room-name text, not grille tag F",
+    "'D' in '3/4\" D': condensate drain pipe designation, not diffuser type D",
+    "'G' on the piping run near the water heater/kiln (~x2073,y609): gas-piping line label, not transfer grille G",
+    "Numbers 121, 129, 130, 105, 112 etc. sitting under letters: room numbers, not CFM",
+    "Letters A, E, G, I, J, D inside the engineer's seal / title block (x>2400): seal text ('REGISTERED PROFESSIONAL ENGINEER', name), not tags",
+    "'20' next to 'D' at ~x1516,y302: part of the '20 X 8' duct size callout",
+    "MD101 keynotes 18 and 26 (existing ceiling transfer grille and existing return grille to remain): not purchased",
+    "Octagonal symbols ~20x20 pts (fans, kiln, equipment): similar size to tag hexagons but not tags",
+    "E and G tagged devices: scheduled as sidewall grilles (M601 note 11, flanged frame surface mount) and drawn in walls on M101 - excluded from the ceiling count",
+    "H and I tagged devices: double-deflection SIDEWALL supply registers (M601 note 10) - excluded from the ceiling count"
+  ],
+  "sheets_used": [
+    "M101",
+    "M601",
+    "MD101"
+  ],
+  "summary": "Buy 31 ceiling air devices. That splits into 28 ceiling supply diffusers and 3 ceiling return grilles, all from the GRILLES schedule on M601 and counted off the hexagon tags on M101 (Mechanical New Work Floor Plan, 1/8\"=1'-0\").\n\nCEILING SUPPLY DIFFUSERS (28):\n- Type A - 5 ea - Price SCD, 6\" round neck, white, 4-way, louvered-face square 4-cone steel, in 24x24 lay-in panel. CFMs: 75, 75, 75, 90, 130.\n- Type B - 4 ea - Price SCD, 8\" round neck, same construction. CFMs: 150, 150, 140, 140.\n- Type C - 15 ea - Price SCD, 10\" round neck, same construction. CFMs: 250x4, 200x2, 300x2, 350x3, 375x4.\n- Type D - 1 ea - Price SCD, 12\" round neck, same construction. CFM: 500.\n- Type J - 3 ea - Price SMD, 12x12 face with 8\" round neck, white, 4-way, high-capacity louvered face, FLANGED FRAME for surface mounting (hard ceilings in the toilet/shower area). CFMs: 175, 150, 150.\nA through D all get a factory-insulated backpan and a Price VCR9 radial balancing damper in the neck (M601 notes 1, 5, 7, 8, 12). J gets an opposed-blade damper (notes 2, 4, 6, 7).\n\nCEILING RETURN/EXHAUST GRILLES (3):\n- Type F - 3 ea - Price 80, 24\"x24\" all-aluminum 1/2\" x 1/2\" x 1/2\" eggcrate, white, CORE ONLY panel for lay-in ceiling. One serves new FCU-1 in MP Room 119; two are in Mtg Room 106. M101 keynote 4 requires a new 24x24 lined (1\" liner) plenum on top of each, with the existing 15x12 duct (field verify) tapped into the plenum top - so allow for the plenums and rect-to-round adapter (keynote 28) as well.\n\nNOT CEILING - do not order these as ceiling vents (15 ea, all wall-mounted):\n- Type E - 4 ea - Price 95, 30x18 primecoat sidewall return. M101 keynote 7 warns the engineer could not field-measure these; 30x18 is approximate and the contractor must field verify each before ordering.\n- Type G - 4 ea - Price 95, 36x36 primecoat sidewall transfer grilles, top elevation 14'-8\" AFF, coordinated with the new Tectum panels.\n- Type H - 3 ea - Price 520D, 18x8 double-deflection sidewall supply, 550 CFM each.\n- Type I - 4 ea - Price 520D, 14x8 double-deflection sidewall supply, 450 CFM each. Schedule flags these with an asterisk: field verify exact grille dimension prior to ordering.\nE, G, H and I are all primecoat and per M601 note 13 receive 2 coats of field paint - verify color with the architect.\n\nALSO IN THE CEILING BUT NOT A GRILLE PURCHASE:\n- 3 ceiling exhaust fans come with an integral grille, so no separate vent is needed at those locations: EF-1 and EF-2 (Greenheck SPA-700, 450 CFM each) and EF-3 (Greenheck SP-B90, 75 CFM). All are centrifugal ceiling exhaust fans with integral grille, backdraft flapper damper, cord/plug set and a factory grille-mounted motion sensor.\n- 1 ea 14x14 eggcrate, Price model 82, mounted in a SOFFIT with an insect screen on the back (M101 keynote 19). It is not in the grille schedule and is not a room ceiling vent, but it is a separate purchase.\n\nTotals: 35 supply air devices overall (28 ceiling + 7 sidewall) moving 10,000 CFM; the ceiling supply portion alone is 6,550 CFM. Nothing is reused - MD101 keynotes 8, 14, 16 and 42 remove the existing ceiling supply, sidewall supply, sidewall return and ceiling return grilles and send you to the new work drawings for new grilles. MD101 keynotes 18, 20 and 26 identify existing ceiling transfer, door and return grilles that stay, so exclude those.\n\nTwo ordering cautions carried from the drawings: (1) M601 asterisk and M101 keynote 7 require field verification of exact grille dimensions for types E and I before ordering; (2) M601 general note 3 requires final ceiling device locations to be coordinated with the lighting layout, sprinkler heads and ceiling grid per the architectural reflected ceiling plan, which can shift devices between lay-in and surface-mount frames - confirm frame style per location before releasing the order."
+}

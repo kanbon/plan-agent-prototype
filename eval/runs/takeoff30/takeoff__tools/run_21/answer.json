@@ -1,0 +1,159 @@
+{
+  "supply_diffusers": [
+    {
+      "tag": "A",
+      "count": 5,
+      "size": "6\" round neck (24x24 lay-in face panel)",
+      "model": "Price SCD",
+      "mount": "ceiling",
+      "cfm_values": [
+        75,
+        75,
+        75,
+        90,
+        130
+      ]
+    },
+    {
+      "tag": "B",
+      "count": 4,
+      "size": "8\" round neck (24x24 lay-in face panel)",
+      "model": "Price SCD",
+      "mount": "ceiling",
+      "cfm_values": [
+        140,
+        140,
+        150,
+        150
+      ]
+    },
+    {
+      "tag": "C",
+      "count": 15,
+      "size": "10\" round neck (24x24 lay-in face panel)",
+      "model": "Price SCD",
+      "mount": "ceiling",
+      "cfm_values": [
+        200,
+        200,
+        250,
+        250,
+        250,
+        250,
+        300,
+        300,
+        350,
+        350,
+        350,
+        375,
+        375,
+        375,
+        375
+      ]
+    },
+    {
+      "tag": "D",
+      "count": 1,
+      "size": "12\" round neck (24x24 lay-in face panel)",
+      "model": "Price SCD",
+      "mount": "ceiling",
+      "cfm_values": [
+        500
+      ]
+    },
+    {
+      "tag": "J",
+      "count": 3,
+      "size": "12 x 12 face with 8\" round neck (flanged frame, surface mount)",
+      "model": "Price SMD",
+      "mount": "ceiling",
+      "cfm_values": [
+        150,
+        150,
+        175
+      ]
+    },
+    {
+      "tag": "H",
+      "count": 3,
+      "size": "18 x 8",
+      "model": "Price 520D",
+      "mount": "sidewall",
+      "cfm_values": [
+        550,
+        550,
+        550
+      ]
+    },
+    {
+      "tag": "I",
+      "count": 4,
+      "size": "14 x 8 (field verify before ordering)",
+      "model": "Price 520D",
+      "mount": "sidewall",
+      "cfm_values": [
+        450,
+        450,
+        450,
+        450
+      ]
+    }
+  ],
+  "supply_diffuser_total": 35,
+  "return_exhaust_grilles": [
+    {
+      "tag": "F",
+      "count": 3,
+      "size": "24\" x 24\" core (1/2\"x1/2\"x1/2\" aluminum eggcrate, core-only panel, lay-in ceiling, white)"
+    },
+    {
+      "tag": "E",
+      "count": 4,
+      "size": "approx. 30 x 18 each - FIELD VERIFY exact size before ordering (Price 95, primecoat, sidewall return)"
+    },
+    {
+      "tag": "G",
+      "count": 4,
+      "size": "36 x 36 (Price 95, primecoat, sidewall transfer grille, top el. 14'-8\" AFF)"
+    },
+    {
+      "tag": "(untagged - M101 note 19)",
+      "count": 1,
+      "size": "14 x 14 eggcrate, Price model 82, mounted in soffit, w/ insect screen on backside (outside-air intake)"
+    }
+  ],
+  "exhaust_fans": [
+    {
+      "tag": "EF-1",
+      "model": "Greenheck SPA-700",
+      "cfm": 450
+    },
+    {
+      "tag": "EF-2",
+      "model": "Greenheck SPA-700",
+      "cfm": 450
+    },
+    {
+      "tag": "EF-3",
+      "model": "Greenheck SP-B90",
+      "cfm": 75
+    }
+  ],
+  "total_supply_cfm": 10000,
+  "excluded_false_positives": [
+    "F/'TLT F' and 'SHOWERS F' (room-name suffix for Female, not a grille tag - smaller text height 6pt vs 12pt tag text)",
+    "D in '3/4\" D' near FCU-1 (condensate drain callout, not tag D)",
+    "A/D/E/G/I/J letters clustered at x>2800 (the 'GEORGIA REGISTERED PROFESSIONAL ENGINEER' seal lettering)",
+    "A at x~2480-2503 (letters inside the general-notes column text)",
+    "G at x~2076 y~613 (part of an equipment/keyed callout, 8pt not 12pt)",
+    "EF-1/EF-2/EF-3 integral grilles - ceiling exhaust fans come with grille per M601 EF note 1, so do NOT order separate grilles for them",
+    "'UH' and 'PHP' symbols in Gymnasium 127 - existing unit heaters / packaged heat pumps, no new air devices there",
+    "Existing ceiling transfer grille, louvered door grille and return grille noted 'TO REMAIN' on MD101 (notes 18, 20, 26) - not purchased"
+  ],
+  "sheets_used": [
+    "M101 - Mechanical New Work Floor Plan (device tags, CFM, keyed notes)",
+    "M601 - Mechanical Legend, General Notes & Schedules (GRILLES schedule, exhaust fan schedule, tag/CFM designation legend)",
+    "MD101 - Mechanical Demolition Floor Plan (confirms existing grilles removed / none reused)"
+  ],
+  "summary": "CEILING AIR DEVICES - 31 total to buy (28 supply diffusers + 3 return grilles). All grilles/diffusers are basis-of-design PRICE per the GRILLES schedule on M601; quantities counted off the tags on M101 (tag letter in hexagon above, CFM below).\n\nCEILING SUPPLY DIFFUSERS - 28 ea:\n- Type A: 5 ea - Price SCD, 6\" round neck (75/75/75/90/130 CFM)\n- Type B: 4 ea - Price SCD, 8\" round neck (140/140/150/150 CFM)\n- Type C: 15 ea - Price SCD, 10\" round neck (200 x2, 250 x4, 300 x2, 350 x3, 375 x4)\n- Type D: 1 ea - Price SCD, 12\" round neck (500 CFM)\nA-D are all the same product: louvered-face square 4-cone steel ceiling supply diffuser, fixed 4-way/360-deg pattern, full-faced louvers, WHITE finish, factory-insulated backpan, in a 24x24 panel for lay-in ceiling, NC max 35. Each one also needs a radial balancing damper in the neck (Price VCR9 or equal) - schedule note 12. Order the 24x24 lay-in module regardless of neck size; only the neck diameter changes.\n- Type J: 3 ea - Price SMD, 12x12 face with 8\" round neck, WHITE, 4-way (150/150/175 CFM). Louvered-face high-capacity steel ceiling supply diffuser with FLANGED FRAME for surface mounting (hard ceiling in the toilet/shower rooms), plus opposed-blade damper.\n\nCEILING RETURN/EXHAUST GRILLES - 3 ea:\n- Type F: 3 ea - Price 80, 24\"x24\" CORE, WHITE, all-aluminum 1/2\"x1/2\"x1/2\" eggcrate, core-only panel for 24x24 lay-in ceiling. One serves FCU-1 (needs the rect-to-round adapter, note 28); the two in Mtg Room 106 each need a new 24x24 lined (1\" liner) plenum built on top (note 4).\n\nNOT CEILING - wall-mounted, 15 ea more (ordering these too, so you have the full grille buy):\n- Type E: 4 ea Price 95, ~30x18 PRIMECOAT return grilles in MP Room 112. The engineer could not field-measure these - FIELD VERIFY exact size before ordering (note 7 / asterisk in schedule).\n- Type G: 4 ea Price 95, 36x36 PRIMECOAT sidewall transfer grilles, top elevation 14'-8\" AFF, coordinate with new Tectum panels.\n- Type H: 3 ea Price 520D, 18x8 PRIMECOAT double-deflection sidewall supply, 550 CFM each (Gymnasium/MP Room wall).\n- Type I: 4 ea Price 520D, 14x8 PRIMECOAT double-deflection sidewall supply, 450 CFM each - field verify size.\nE, G, H, I are primecoat only and get 2 coats of field paint - verify color with the architect (note 13). H and I also get opposed-blade dampers.\n\nONE MORE, UNTAGGED: M101 keyed note 19 calls for a 14x14 eggcrate, Price model 82, mounted in the soffit with an insect screen on the backside (outside-air intake at FCU-1). 1 ea.\n\nCEILING FANS (grille included, do NOT buy a separate grille): EF-1 and EF-2 = Greenheck SPA-700, 450 CFM each; EF-3 = Greenheck SP-B90, 75 CFM. All are centrifugal ceiling exhaust fans with integral grille, backdraft damper, cord/plug set and a factory grille-mounted motion sensor.\n\nCHECKS: the six type-C diffusers in MP Room 119 total 1400 CFM, matching FCU-1 (1400 CFM). All supply devices (A,B,C,D,J,H,I) total exactly 10,000 CFM. Demolition sheet MD101 shows the existing ceiling supply, ceiling return and sidewall grilles being removed with \"see new work drawings for installation of new grille\" - nothing is salvaged or reused, so every count above is a purchase. Existing ceiling transfer grille, door grille and one return grille are noted \"to remain\" and are excluded. Coordinate exact diffuser locations with the architectural reflected ceiling plan, lighting and sprinkler heads per M601 general note 3."
+}

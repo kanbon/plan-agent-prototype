@@ -1,0 +1,23 @@
+{
+  "scale": "1:100",
+  "items_checked": 18,
+  "findings": [
+    {
+      "kind": "dimension chain does not sum to overall dimension",
+      "labeled_value": 4,
+      "unit": "m",
+      "comparison_value": 3.43,
+      "element": "Top dimension line, segment for the SCHLAFEN/BAD block (chain 30 | 5.86 | 11,5 | 4.00 | 30 against overall 10.00)",
+      "explanation": "The partial dimensions add up to 0.30 + 5.86 + 0.115 + 4.00 + 0.30 = 10.575 m, which contradicts the printed overall width of 10.00 m (over by 0.575 m). Scaling the drawing (374 px = 10.00 m) the right-hand room block measures about 3.4-3.5 m, so the 4.00 segment is the wrong one; closing the chain with the other printed values gives 3.425 m. Note the labelled areas of SCHLAFEN and BAD imply a width of only ~3.24 m, which would instead require the internal wall to be 0.30 m rather than the printed 11,5 cm - the partition thickness and this segment must be reconciled together."
+    },
+    {
+      "kind": "room area label inconsistent with its dimensions",
+      "labeled_value": 31.2,
+      "unit": "m2",
+      "comparison_value": 37.5,
+      "element": "WOHNEN area label",
+      "explanation": "WOHNEN spans the full interior depth: 7.00 - 0.30 - 0.30 = 6.40 m, and its printed clear width is 5.86 m. 5.86 x 6.40 = 37.50 m2, so the label understates the room by about 6.3 m2 (20%). The measured extent in the drawing (217 x 234 px) confirms roughly 5.8 x 6.4 m. Either the area label or the 5.86 m dimension has to be corrected before issue."
+    }
+  ],
+  "summary": "Two hard errors: the top dimension chain sums to 10.575 m against a printed overall of 10.00 m (the 4.00 m segment is the outlier - it should be about 3.43 m to close, though the SCHLAFEN/BAD areas suggest ~3.24 m with a 30 cm partition, so please reconcile the partition thickness \"11,5\" at the same time), and the WOHNEN area label of 31.2 m2 does not match its own dimensions of 5.86 x 6.40 m = 37.5 m2. SCHLAFEN (13.4 m2) and BAD (6.9 m2) are internally consistent with each other and with the 6.40 m interior depth, so I left them alone. One item to verify at full resolution: both door openings in the partition wall appear to fall above the SCHLAFEN/BAD dividing wall, which would leave BAD without a door; also the notation \"11,5\" uses a comma and no unit while the rest of the chain uses points and metres."
+}

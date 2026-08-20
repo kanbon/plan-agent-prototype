@@ -1,0 +1,120 @@
+{
+  "supply_diffusers": [
+    {
+      "tag": "A",
+      "count": 5,
+      "size": "6\" round neck, 24x24 lay-in panel",
+      "model": "Price SCD (white, 4-way)",
+      "mount": "ceiling",
+      "cfm_values": [
+        75,
+        75,
+        75,
+        90,
+        130
+      ]
+    },
+    {
+      "tag": "B",
+      "count": 4,
+      "size": "8\" round neck, 24x24 lay-in panel",
+      "model": "Price SCD (white, 4-way)",
+      "mount": "ceiling",
+      "cfm_values": [
+        150,
+        150,
+        140,
+        140
+      ]
+    },
+    {
+      "tag": "C",
+      "count": 15,
+      "size": "10\" round neck, 24x24 lay-in panel",
+      "model": "Price SCD (white, 4-way)",
+      "mount": "ceiling",
+      "cfm_values": [
+        250,
+        250,
+        250,
+        250,
+        200,
+        200,
+        300,
+        300,
+        350,
+        350,
+        350,
+        375,
+        375,
+        375,
+        375
+      ]
+    },
+    {
+      "tag": "D",
+      "count": 1,
+      "size": "12\" round neck, 24x24 lay-in panel",
+      "model": "Price SCD (white, 4-way)",
+      "mount": "ceiling",
+      "cfm_values": [
+        500
+      ]
+    },
+    {
+      "tag": "J",
+      "count": 3,
+      "size": "12x12 face with 8\" round neck, surface-mount flanged frame",
+      "model": "Price SMD (white, 4-way, w/ opposed blade damper)",
+      "mount": "ceiling",
+      "cfm_values": [
+        175,
+        150,
+        150
+      ]
+    }
+  ],
+  "supply_diffuser_total": 28,
+  "return_exhaust_grilles": [
+    {
+      "tag": "F",
+      "count": 3,
+      "size": "24\" x 24\" core only, in 24x24 lay-in panel"
+    }
+  ],
+  "exhaust_fans": [
+    {
+      "tag": "EF-1",
+      "model": "Greenheck SPA-700",
+      "cfm": 450
+    },
+    {
+      "tag": "EF-2",
+      "model": "Greenheck SPA-700",
+      "cfm": 450
+    },
+    {
+      "tag": "EF-3",
+      "model": "Greenheck SP-B90",
+      "cfm": 75
+    }
+  ],
+  "total_supply_cfm": 6550,
+  "excluded_false_positives": [
+    "E (4 ea.), Price 95, 30x18 primecoat — real new grilles but SIDEWALL transfer grilles (schedule note 11 = heavy-duty steel sidewall grille, note 6 = flanged frame surface mount), not ceiling. M101 keynote 6 says field-verify exact size before ordering.",
+    "G (4 ea.), Price 95, 36x36 primecoat — SIDEWALL transfer grilles, top elev. 14'-8\" AFF (M101 keynote 3), not ceiling.",
+    "H (3 ea.), Price 520D, 18x8 primecoat — double-deflection SIDEWALL supply registers w/ OBD, not ceiling.",
+    "I (4 ea.), Price 520D, 14x8 primecoat — double-deflection SIDEWALL supply registers w/ OBD, not ceiling. Schedule flags field-verify size.",
+    "'D' at page pt (1516,302) on M101 — this is the plumbing label 3/4\" D (condensate drain), not a type-D diffuser tag. Confirmed by zoom.",
+    "'F' at (1615,354) and (1570,364) on M101 — room name labels 'TLT F / 121' and 'SHOWERS F / 122', not grille tags.",
+    "'G' at (2073,609) on M101 — gas piping line designation (— G —) in the Kilns/Craft area, not a grille tag.",
+    "3 hexagon tags on M101 with a dash instead of a letter (450 / 450 / 75 CFM) — these are the airflow tags for ceiling exhaust fans EF-1, EF-2, EF-3, which have integral grilles per M601 exhaust fan schedule note 1. No separate grille to purchase.",
+    "Single letters A/E/G/J/D/I appearing at x>2380 on M101 — sheet-notes column text and the engineer's seal / titleblock, not plan tags."
+  ],
+  "sheets_used": [
+    "M101",
+    "M601",
+    "MD101"
+  ],
+  "summary": "Buy 31 ceiling air devices — all Price, all new (MD101 shows the existing ceiling supply grilles being demolished \"for installation of new grille\", so nothing is reused).\n\nCEILING SUPPLY DIFFUSERS — 28 total, louvered-face square 4-cone steel, white, 4-way pattern, factory-insulated backpan, with radial balancing damper in the neck (Price VCR9 or equal), NC 35 max:\n- Type A — Price SCD, 6\" round neck in a 24x24 lay-in panel — 5 ea. (75/75/75/90/130 CFM)\n- Type B — Price SCD, 8\" round neck in a 24x24 lay-in panel — 4 ea. (150/150/140/140 CFM)\n- Type C — Price SCD, 10\" round neck in a 24x24 lay-in panel — 15 ea. (250 x4, 200 x2, 300 x2, 350 x3, 375 x4)\n- Type D — Price SCD, 12\" round neck in a 24x24 lay-in panel — 1 ea. (500 CFM)\n- Type J — Price SMD, 12x12 face with 8\" round neck — 3 ea. (175/150/150 CFM). Note J is the high-capacity model with an opposed-blade damper and a FLANGED FRAME FOR SURFACE MOUNTING (hard/gyp ceiling), not a lay-in panel.\nTotal ceiling supply air = 6,550 CFM.\n\nCEILING RETURN/EXHAUST GRILLES — 3 total:\n- Type F — Price 80, all-aluminum 1/2\" x 1/2\" x 1/2\" eggcrate, 24\" x 24\" CORE ONLY panel for lay-in ceiling, white — 3 ea. (no CFM scheduled). One serves new FCU-1 in the MP Room (M101 keynote 4 requires a new 24x24 lined plenum atop it); two are in the Mtg Room area.\n\nTWO THINGS THAT LOOK LIKE CEILING VENTS BUT AREN'T LINE ITEMS FOR YOU:\n- EF-1 and EF-2 (Greenheck SPA-700, 450 CFM ea.) and EF-3 (Greenheck SP-B90, 75 CFM) are ceiling exhaust fans that come WITH an integral grille and factory grille-mounted motion sensor — the grille is part of the fan, don't buy separate ones. Their hexagon tags on M101 carry a dash where the grille letter would be.\n- 1 ea. 14\" x 14\" eggcrate, Price model 82, mounted in the soffit with an insect screen on the back (M101 keynote 14). Horizontal soffit-mounted, so include it if your \"ceiling vent\" scope covers soffits.\n\nNOT CEILING (15 ea. sidewall, priced separately if in your scope): E = Price 95, 30x18 primecoat, 4 ea.; G = Price 95, 36x36 primecoat, 4 ea.; H = Price 520D, 18x8 primecoat, 3 ea.; I = Price 520D, 14x8 primecoat, 4 ea. All primecoat units get 2 coats of field paint — confirm color with the architect.\n\nTwo procurement cautions from the schedule: types E and I are starred \"FIELD VERIFY EXACT GRILLE DIMENSION PRIOR TO ORDERING\" (M101 keynote 6 says the engineer could not field-measure the existing return openings and 30x18 is approximate) — that affects the sidewall grilles, not the ceiling count. Also, M601 general note 3 requires coordinating ceiling register locations with the lighting layout, sprinklers and ceiling grid per the architectural reflected ceiling plans, so verify the lay-in vs. surface-mount frame split (A/B/C/D/F = lay-in, J = surface) against the RCP before releasing the order.\n\nSheets used: M101 (Mechanical New Work Floor Plan) for the device count and CFM tags; M601 (Mechanical Legend, General Notes & Schedules) for the Grilles schedule, exhaust fan schedule and construction notes; MD101 (Mechanical Demolition Floor Plan) to confirm existing grilles are demolished rather than reused."
+}

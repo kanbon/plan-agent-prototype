@@ -1,0 +1,71 @@
+{
+  "scale": "1:100",
+  "items_checked": 18,
+  "findings": [
+    {
+      "kind": "dimension chain does not sum to overall",
+      "labeled_value": 10,
+      "unit": "m",
+      "comparison_value": 10.575,
+      "element": "top dimension line: 30 / 5.86 / 11,5 / 4.00 / 30 vs overall 10.00",
+      "explanation": "The sub-dimensions add up to 0.30 + 5.86 + 0.115 + 4.00 + 0.30 = 10.575 m, which is 57.5 cm more than the stated overall width of 10.00 m. The chain must close on the overall dimension."
+    },
+    {
+      "kind": "sub-dimension contradicts drawn geometry",
+      "labeled_value": 5.86,
+      "unit": "m",
+      "comparison_value": 5.7,
+      "element": "dimension '5.86' (WOHNEN clear width, inner face of left wall to partition)",
+      "explanation": "Scaled off the 10.00 m overall, the partition sits about 5.70 m from the inner face of the left exterior wall, not 5.86 m. The drawn geometry closes correctly (5.70 + 0.115 + 3.59 = 9.40 m clear), so the printed value is the error."
+    },
+    {
+      "kind": "sub-dimension contradicts drawn geometry",
+      "labeled_value": 4,
+      "unit": "m",
+      "comparison_value": 3.59,
+      "element": "dimension '4.00' (clear width of SCHLAFEN/BAD zone)",
+      "explanation": "The right-hand zone scales to roughly 3.59 m clear, about 41 cm less than the labeled 4.00 m. Correcting this label is also what makes the dimension chain close on 10.00 m."
+    },
+    {
+      "kind": "room area inconsistent with dimensions",
+      "labeled_value": 31.2,
+      "unit": "m2",
+      "comparison_value": 36.5,
+      "element": "WOHNEN area label",
+      "explanation": "WOHNEN runs the full interior depth of 7.00 - 2 x 0.30 = 6.40 m. With the drawn width of ~5.70 m the area is ~36.5 m2 (with the labeled 5.86 m it would be 37.5 m2). The stated 31.2 m2 is roughly 5-6 m2 too low and matches no combination of the printed dimensions."
+    },
+    {
+      "kind": "room area inconsistent with dimensions",
+      "labeled_value": 6.9,
+      "unit": "m2",
+      "comparison_value": 8.2,
+      "element": "BAD area label",
+      "explanation": "BAD scales to about 3.59 m x 2.29 m = ~8.2 m2. The printed 6.9 m2 is about 19% low. With the labeled 4.00 m width it would need a depth of only 1.73 m, which contradicts the drawing."
+    },
+    {
+      "kind": "room area inconsistent with dimensions",
+      "labeled_value": 13.4,
+      "unit": "m2",
+      "comparison_value": 14,
+      "element": "SCHLAFEN area label",
+      "explanation": "SCHLAFEN scales to about 3.59 m x 3.91 m = ~14.0 m2. Also, SCHLAFEN depth + BAD depth + partition must equal the 6.40 m interior depth; the depths implied by the two area labels (3.35 m and 1.73 m using the 4.00 m width) sum to only ~5.2 m."
+    },
+    {
+      "kind": "area schedule does not add up to enclosed area",
+      "labeled_value": 51.5,
+      "unit": "m2",
+      "comparison_value": 58.9,
+      "element": "sum of all room areas (31.2 + 13.4 + 6.9)",
+      "explanation": "Net interior area is 9.40 x 6.40 = 60.16 m2 less the partitions (~1.2 m2) = ~58.9 m2. The labelled rooms account for only 51.5 m2, leaving ~7.4 m2 unaccounted for although the plan shows no corridor, shaft or other unlabelled space."
+    },
+    {
+      "kind": "missing building element",
+      "labeled_value": null,
+      "unit": "unknown",
+      "comparison_value": null,
+      "element": "exterior walls of WOHNEN, SCHLAFEN and BAD",
+      "explanation": "No window symbols are drawn anywhere on the plan. A living room and bedroom require windows for daylight/ventilation; either the openings are missing from the drawing or their symbols were dropped."
+    }
+  ],
+  "summary": "The top dimension chain does not close: 30 + 5.86 + 11,5 + 4.00 + 30 = 10.575 m against a stated overall of 10.00 m, and both interior sub-dimensions disagree with the drawn geometry (partition at ~5.70 m, right zone ~3.59 m). All three area labels are inconsistent with the dimensions - WOHNEN in particular should be ~36.5 m2 at 6.40 m interior depth, not 31.2 m2 - and the areas total 51.5 m2 against ~58.9 m2 of net enclosed space. Please re-derive the dimension chain and the areas from the model, and confirm whether window openings were meant to be shown, as none are drawn."
+}

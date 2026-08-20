@@ -1,0 +1,26 @@
+{
+  "task": "dimcheck",
+  "parsed": true,
+  "found_primary": false,
+  "found_primary_label_only": false,
+  "primary_measured_m": null,
+  "primary_abs_error_m": null,
+  "found_living_5.86": false,
+  "found_chain_sum": true,
+  "found_door_swing": false,
+  "area_findings": 2,
+  "other_observations": 0,
+  "false_positives": 0,
+  "flagged_correct_dimensions": [],
+  "n_findings": 3,
+  "dimensions_checked": 21,
+  "scale_ok": true,
+  "matched_ids": [
+    "area_bad",
+    "area_wohnen",
+    "chain_sum"
+  ],
+  "unmatched": [],
+  "score": 0.1,
+  "pass": false
+}

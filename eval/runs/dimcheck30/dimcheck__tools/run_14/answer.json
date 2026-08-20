@@ -1,0 +1,71 @@
+{
+  "scale": "1:100",
+  "items_checked": 27,
+  "findings": [
+    {
+      "kind": "dimension text does not match drawn geometry",
+      "labeled_value": 5.86,
+      "unit": "m",
+      "comparison_value": 5.8,
+      "element": "Lower dimension chain, second segment (clear width of WOHNEN, from inner face of left exterior wall to left face of the vertical partition)",
+      "explanation": "The dimension line runs from x=121.89 pt to x=286.30 pt = 164.41 pt. At 1:100 (1 pt = 35.278 mm) that is 5.800 m, not 5.86 m. The label overstates the drawn bay by 6 cm. 5.80 m is also the value required for the chain to close against the 10.00 m overall."
+    },
+    {
+      "kind": "dimension text does not match drawn geometry",
+      "labeled_value": 4,
+      "unit": "m",
+      "comparison_value": 3.485,
+      "element": "Lower dimension chain, fourth segment (clear width of SCHLAFEN / BAD, from right face of the vertical partition to inner face of right exterior wall)",
+      "explanation": "The dimension line runs from x=289.56 pt to x=388.35 pt = 98.79 pt = 3.485 m at 1:100. The label overstates the drawn bay by 51.5 cm. If the contractor sets out 4.00 m here the right-hand exterior wall lands half a metre outside the 10.00 m envelope."
+    },
+    {
+      "kind": "dimension chain does not close against overall dimension",
+      "labeled_value": 10,
+      "unit": "m",
+      "comparison_value": 10.575,
+      "element": "Overall width dimension (10.00) vs. sum of the sub-dimensions below it (30 + 5.86 + 11.5 + 4.00 + 30)",
+      "explanation": "0.30 + 5.86 + 0.115 + 4.00 + 0.30 = 10.575 m, which is 0.575 m more than the 10.00 m overall dimension printed above it. The drawn geometry does close (0.300 + 5.800 + 0.115 + 3.485 + 0.300 = 10.000 m), so the two text values 5.86 and 4.00 are the culprits. This chain must be corrected to 30 / 5.80 / 11.5 / 3.49 / 30 before issue."
+    },
+    {
+      "kind": "room area label wrong",
+      "labeled_value": 31.2,
+      "unit": "m2",
+      "comparison_value": 37.12,
+      "element": "WOHNEN area annotation",
+      "explanation": "Clear internal size of WOHNEN is 5.800 m x 6.400 m (x 121.89-286.30 pt, y 433.70-615.12 pt) = 37.12 m2. The label reads 31.2 m2, understating the room by 5.9 m2 - it looks like the digits of 37.1 were transposed."
+    },
+    {
+      "kind": "room area label wrong",
+      "labeled_value": 13.4,
+      "unit": "m2",
+      "comparison_value": 14.24,
+      "element": "SCHLAFEN area annotation",
+      "explanation": "Clear internal size of SCHLAFEN is 3.485 m x 4.085 m (x 289.56-388.35 pt, y 433.70-549.50 pt) = 14.24 m2, not 13.4 m2. Note it is not 16.34 m2 either, so the label does not match the (also wrong) 4.00 m dimension - it matches nothing on the sheet."
+    },
+    {
+      "kind": "room area label wrong",
+      "labeled_value": 6.9,
+      "unit": "m2",
+      "comparison_value": 7.67,
+      "element": "BAD area annotation",
+      "explanation": "Clear internal size of BAD is 3.485 m x 2.200 m (x 289.56-388.35 pt, y 552.76-615.12 pt) = 7.67 m2, not 6.9 m2. Cross-check: the three labelled areas total 51.5 m2 against a 70.0 m2 gross footprint, implying 18.5 m2 of wall build-up; the drawn walls (0.30 m perimeter + two 0.115 m partitions) only account for 10.98 m2, and the drawn room areas total 59.02 m2."
+    },
+    {
+      "kind": "layout / circulation defect",
+      "labeled_value": null,
+      "unit": "unknown",
+      "comparison_value": null,
+      "element": "Door between SCHLAFEN and BAD (0.90 m opening in the horizontal partition at y=549.5-552.76 pt)",
+      "explanation": "The only opening into BAD is in the partition it shares with SCHLAFEN; there is no door from WOHNEN. The bathroom of the flat can therefore only be reached by walking through the bedroom, which is normally not acceptable and is likely not the intent. The only other doors are the 1.00 m entrance in the bottom exterior wall and the 1.00 m WOHNEN-SCHLAFEN door."
+    },
+    {
+      "kind": "missing dimension",
+      "labeled_value": null,
+      "unit": "unknown",
+      "comparison_value": null,
+      "element": "Vertical direction - no sub-dimension chain beside the 7.00 m overall",
+      "explanation": "Only the overall 7.00 m is dimensioned vertically. The SCHLAFEN / BAD split (4.085 m + 0.115 m partition + 2.200 m clear, inside 0.30 m walls) is undimensioned, so the contractor cannot set out the horizontal partition from this sheet. Add the chain 30 / 4.085 / 11.5 / 2.20 / 30."
+    }
+  ],
+  "summary": "The drawn geometry is internally consistent — the shell is exactly 10.00 x 7.00 m, walls 30 cm, partitions 11.5 cm, and the drawn bays (5.800 + 3.485 m) close perfectly against the overall — but five printed values contradict it. The width chain 30/5.86/11.5/4.00/30 sums to 10.575 m instead of 10.00 m: 5.86 should read 5.80 and 4.00 should read 3.49. All three room areas are understated as well (WOHNEN 31.2 vs 37.12 m2, SCHLAFEN 13.4 vs 14.24 m2, BAD 6.9 vs 7.67 m2), and their total of 51.5 m2 is impossible inside a 70 m2 footprint with these wall thicknesses. Two further items to resolve before issue: BAD is only reachable through SCHLAFEN, and the vertical direction has no sub-dimension chain, so the horizontal partition cannot be set out."
+}

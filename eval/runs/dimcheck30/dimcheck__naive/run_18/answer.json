@@ -1,0 +1,39 @@
+{
+  "scale": "1:100",
+  "items_checked": 18,
+  "findings": [
+    {
+      "kind": "dimension chain does not sum to overall dimension",
+      "labeled_value": 4,
+      "unit": "m",
+      "comparison_value": 3.43,
+      "element": "Top dimension line, right-hand segment (chain 30 / 5.86 / 11.5 / 4.00 / 30 against overall 10.00)",
+      "explanation": "The partial dimensions add up to 0.30 + 5.86 + 0.115 + 4.00 + 0.30 = 10.575 m, which contradicts the overall width of 10.00 m. Back-calculating from the overall dimension gives 10.00 - 0.30 - 5.86 - 0.115 - 0.30 = 3.425 m for this segment; scaling the drawn room off the 1:100 geometry also gives roughly 3.5 m, so the printed 4.00 is the wrong value, not the total."
+    },
+    {
+      "kind": "room area label inconsistent with dimensions",
+      "labeled_value": 31.2,
+      "unit": "m2",
+      "comparison_value": 37.5,
+      "element": "WOHNEN area label",
+      "explanation": "Clear depth is 7.00 - 2 x 0.30 = 6.40 m and the labelled clear width is 5.86 m, giving 5.86 x 6.40 = 37.5 m2, not 31.2 m2. The drawn geometry agrees (~36.9 m2). The shortfall of about 6.3 m2 cannot be explained by wall thicknesses."
+    },
+    {
+      "kind": "room area label inconsistent with dimensions",
+      "labeled_value": 6.9,
+      "unit": "m2",
+      "comparison_value": 8.1,
+      "element": "BAD area label",
+      "explanation": "With the corrected clear width of 3.43 m and the depth left over after SCHLAFEN (6.40 - 13.4/3.43 = 3.91 m - 0.115 m partition = 2.38 m), BAD is about 8.1 m2. Cross-check: 37.5 (WOHNEN) + 13.4 (SCHLAFEN) + 8.1 (BAD) = 59.0 m2, which is exactly the net interior area (9.285 x 6.40 - 3.43 x 0.115), so SCHLAFEN's 13.4 m2 is correct and BAD's 6.9 m2 is about 1.2 m2 too small."
+    },
+    {
+      "kind": "door placement / room without access",
+      "labeled_value": null,
+      "unit": "unknown",
+      "comparison_value": null,
+      "element": "Lower door in the vertical partition between WOHNEN and SCHLAFEN/BAD",
+      "explanation": "Both door openings drawn in the vertical partition lie above the horizontal SCHLAFEN/BAD dividing wall, so both serve SCHLAFEN and BAD has no door at all. The lower opening should be moved about 0.8 m down, below the dividing wall, so that BAD is accessible from WOHNEN."
+    }
+  ],
+  "summary": "Four problems need fixing before issue: the top dimension chain overruns the 10.00 m overall width by 0.575 m (the 4.00 m segment should read ~3.43 m), and the WOHNEN (31.2 vs 37.5 m2) and BAD (6.9 vs ~8.1 m2) area labels do not match the geometry — only SCHLAFEN's 13.4 m2 is consistent, and the three corrected areas sum exactly to the net interior area. In addition, both doors in the vertical partition open into SCHLAFEN, leaving BAD with no access; the lower opening needs to move below the SCHLAFEN/BAD wall. The overall 7.00 m depth, the 30 cm exterior / 11.5 cm interior wall thicknesses, the 1:100 scale and the title block all check out."
+}

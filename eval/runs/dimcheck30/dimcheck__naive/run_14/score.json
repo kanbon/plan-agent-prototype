@@ -1,0 +1,39 @@
+{
+  "task": "dimcheck",
+  "parsed": true,
+  "found_primary": false,
+  "found_primary_label_only": true,
+  "primary_measured_m": 3.43,
+  "primary_abs_error_m": 0.054999999999999716,
+  "found_living_5.86": false,
+  "found_chain_sum": true,
+  "found_door_swing": true,
+  "area_findings": 3,
+  "other_observations": 1,
+  "false_positives": 1,
+  "flagged_correct_dimensions": [
+    "inner wall"
+  ],
+  "n_findings": 9,
+  "dimensions_checked": 17,
+  "scale_ok": true,
+  "matched_ids": [
+    "area_bad",
+    "area_sum",
+    "area_wohnen",
+    "bedroom_4.00?",
+    "chain_sum",
+    "door_swing"
+  ],
+  "unmatched": [
+    {
+      "kind": "inconsistent dimension units / formatting",
+      "labeled": 11.5,
+      "unit": "cm",
+      "comparison": null,
+      "element": "Dimension chain values 30, 11.5 (cm) mixed with 5.86, 4.00, 10.00 (m)"
+    }
+  ],
+  "score": 0.35,
+  "pass": false
+}

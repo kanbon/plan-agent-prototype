@@ -1,0 +1,145 @@
+{
+  "supply_diffusers": [
+    {
+      "tag": "A",
+      "count": 5,
+      "size": "6\" round neck, 24x24 lay-in panel",
+      "model": "Price SCD (louvered-face square 4-cone steel ceiling supply diffuser, white, 4-way)",
+      "mount": "ceiling",
+      "cfm_values": [
+        75,
+        75,
+        75,
+        90,
+        130
+      ]
+    },
+    {
+      "tag": "B",
+      "count": 4,
+      "size": "8\" round neck, 24x24 lay-in panel",
+      "model": "Price SCD (louvered-face square 4-cone steel ceiling supply diffuser, white, 4-way)",
+      "mount": "ceiling",
+      "cfm_values": [
+        150,
+        150,
+        140,
+        140
+      ]
+    },
+    {
+      "tag": "C",
+      "count": 15,
+      "size": "10\" round neck, 24x24 lay-in panel",
+      "model": "Price SCD (louvered-face square 4-cone steel ceiling supply diffuser, white, 4-way)",
+      "mount": "ceiling",
+      "cfm_values": [
+        250,
+        200,
+        250,
+        250,
+        250,
+        200,
+        350,
+        350,
+        350,
+        300,
+        375,
+        375,
+        300,
+        375,
+        375
+      ]
+    },
+    {
+      "tag": "D",
+      "count": 1,
+      "size": "12\" round neck, 24x24 lay-in panel",
+      "model": "Price SCD (louvered-face square 4-cone steel ceiling supply diffuser, white, 4-way)",
+      "mount": "ceiling",
+      "cfm_values": [
+        500
+      ]
+    },
+    {
+      "tag": "J",
+      "count": 3,
+      "size": "12x12 face, 8\" round neck",
+      "model": "Price SMD (louvered-face high-capacity steel ceiling supply diffuser, surface/flanged mount, white, 4-way)",
+      "mount": "ceiling",
+      "cfm_values": [
+        175,
+        150,
+        150
+      ]
+    }
+  ],
+  "supply_diffuser_total": 28,
+  "return_exhaust_grilles": [
+    {
+      "tag": "F",
+      "count": 3,
+      "size": "24\" x 24\" core (lay-in panel)"
+    },
+    {
+      "tag": "(M101 note 19 - untagged)",
+      "count": 1,
+      "size": "14 x 14 eggcrate, Price model 82, soffit-mounted w/ insect screen"
+    },
+    {
+      "tag": "E (sidewall - NOT ceiling)",
+      "count": 4,
+      "size": "30 x 18 (approx., field verify)"
+    },
+    {
+      "tag": "G (sidewall transfer - NOT ceiling)",
+      "count": 4,
+      "size": "36 x 36"
+    },
+    {
+      "tag": "H (sidewall supply - NOT ceiling)",
+      "count": 3,
+      "size": "18 x 8"
+    },
+    {
+      "tag": "I (sidewall supply - NOT ceiling)",
+      "count": 4,
+      "size": "14 x 8 (field verify)"
+    }
+  ],
+  "exhaust_fans": [
+    {
+      "tag": "EF-1",
+      "model": "Greenheck SPA-700 (centrifugal ceiling exhaust fan w/ integral grille, BD damper, grille-mounted motion sensor, speed controller)",
+      "cfm": 450
+    },
+    {
+      "tag": "EF-2",
+      "model": "Greenheck SPA-700 (centrifugal ceiling exhaust fan w/ integral grille, BD damper, grille-mounted motion sensor, speed controller)",
+      "cfm": 450
+    },
+    {
+      "tag": "EF-3",
+      "model": "Greenheck SP-B90 (centrifugal ceiling exhaust fan w/ integral grille, BD damper, grille-mounted motion sensor, speed controller)",
+      "cfm": 75
+    }
+  ],
+  "total_supply_cfm": 6550,
+  "excluded_false_positives": [
+    "F/121: the 'F' is part of room label 'TLT F  121' (room name/number), not a grille tag - glyph height 6.1 pt vs 12.0 pt for real tags",
+    "F near 'SHOWERS F 122': same, room label",
+    "D/20: the 'D' is part of the note text '3/4\" D' (condensate drain line designation), not a tag",
+    "G at (2076,613): stray letter in the KILNS/WH area, not in a hexagon",
+    "Single letters A/D/E/G/I/J at x>2400: engineer's registration seal ('GEORGIA REGISTERED PROFESSIONAL ENGINEER, JAMES A. ANDREWS, JR.') and title-block text",
+    "3 hexagons with no letter (450 / 450 / 75 CFM): these are the exhaust-fan airflow tags for EF-1/EF-2/EF-3, not grille type tags",
+    "Tags E, G, H, I: real devices but SIDEWALL/wall-mounted per M601 grille notes 10 & 11 - excluded from the ceiling count",
+    "Existing devices on MD101 (notes 18, 20, 26): existing ceiling transfer grille, louvered transfer door grille and return grille TO REMAIN - not purchased"
+  ],
+  "sheets_used": [
+    "G0-0",
+    "MD101",
+    "M101",
+    "M601"
+  ],
+  "summary": "Buy 31 ceiling air devices, plus 3 ceiling exhaust fans (which come with their own integral grille) and 1 soffit eggcrate.\\n\\nCEILING SUPPLY DIFFUSERS - 28 total. All are Price SCD except type J. The SCD is a louvered-face square 4-cone steel ceiling supply diffuser, 360 deg / 4-way fixed pattern, white, in a 24x24 panel for lay-in ceiling, with a full-faced louver, factory insulated backpan and a radial balancing damper in the neck (Price VCR9 or equal):\\n  - Type A, 6\\\" round neck: 5 ea (75/75/75/90/130 CFM)\\n  - Type B, 8\\\" round neck: 4 ea (150/150/140/140 CFM)\\n  - Type C, 10\\\" round neck: 15 ea (250/200/250/250/250/200/350/350/350/300/375/375/300/375/375 CFM)\\n  - Type D, 12\\\" round neck: 1 ea (500 CFM, Kilns 115)\\n  - Type J, Price SMD, 12x12 face with 8\\\" round neck, white, 4-way, FLANGED FRAME FOR SURFACE MOUNTING (hard ceiling, not lay-in), with opposed blade damper: 3 ea (175/150/150 CFM)\\nTotal supply air through ceiling diffusers: 6,550 CFM.\\n\\nCEILING RETURN/EXHAUST GRILLES - 3 total:\\n  - Type F, Price 80, 24\\\"x24\\\" core-only panel, all-aluminum 1/2\\\"x1/2\\\"x1/2\\\" eggcrate, white, in 24x24 lay-in panel: 3 ea (1 at the MP Room 119 / FCU-1 return, 2 in Mtg Room 106). Per M101 note 4 each gets a new 24x24 lined (1/2\\\" liner) plenum on top.\\n\\nALSO CEILING-MOUNTED (order separately, not from the grille schedule):\\n  - EF-1 and EF-2: Greenheck SPA-700, 450 CFM ea, 0.30 in. w.g., 1100 RPM, 350 W, 2.5 sones\\n  - EF-3: Greenheck SP-B90, 75 CFM, 0.25 in. w.g., 700 RPM, 50 W, 2.5 sones\\n  All three are centrifugal ceiling exhaust fans with integral grille, flapper backdraft damper, plug/cord set, mounting brackets, factory grille-mounted motion sensor, factory disconnect and speed controller - so no separate exhaust grille is purchased for them.\\n  - 1 ea 14x14 eggcrate, Price model 82, mounted in a soffit with insect screen on the back (M101 note 19). Soffit, not ceiling, but it is an extra air-vent panel that is easy to miss because it is called out in a note only, not tagged.\\n\\nNOT CEILING - do not include these in a ceiling-vent order (15 ea wall-mounted devices are also on M101): type E 30x18 Price 95 heavy-duty steel sidewall return grille x4; type G 36x36 Price 95 sidewall transfer grille x4 (2 wall openings, tagged both faces, top el. 14'-8\\\" AFF); type H 18x8 Price 520D double-deflection sidewall supply x3; type I 14x8 Price 520D double-deflection sidewall supply x4.\\n\\nWATCH-OUTS FOR PRICING: (1) The E and I grilles carry an asterisk on M601 - field verify exact dimensions before ordering; M101 note 7 says the engineer could not field measure the return grilles and 30x18 is approximate. (2) E, G, H and I ship PRIMECOAT and get 2 coats of field paint - verify color with the architect. (3) All ceiling types (A-D, F, J) are WHITE factory finish. (4) M601 general note 3 and M101 notes 5/3 require coordinating exact device locations with the architectural reflected ceiling plans, the lighting layout, sprinkler heads and the new Tectum panels. (5) Nothing is salvaged and reused - MD101 removes the existing ceiling supply, sidewall supply and sidewall return grilles and the existing ceiling exhaust fan, and the grilles/fans that stay (MD101 notes 18, 20, 26, 31) are untouched, so every tagged device above is a new purchase.\\n\\nSheets used: G0-0 (drawing index), MD101 (mechanical demolition - to confirm nothing is reused), M101 (mechanical new work floor plan - the device count), M601 (mechanical legend, general notes & schedules - the GRILLES and EXHAUST FANS schedules)."
+}

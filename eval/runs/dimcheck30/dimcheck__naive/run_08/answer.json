@@ -1,0 +1,71 @@
+{
+  "findings": [
+    {
+      "kind": "dimension chain does not sum to the overall dimension",
+      "labeled_value": 10,
+      "unit": "m",
+      "comparison_value": 10.575,
+      "element": "Top horizontal dimension chain (30 / 5.86 / 11.5 / 4.00 / 30) vs. overall '10.00'",
+      "explanation": "Read with the usual mixed-unit convention (30 = 30 cm walls, 11.5 = 11.5 cm partition), the chain is 0.30 + 5.86 + 0.115 + 4.00 + 0.30 = 10.575 m, which is 0.575 m more than the stated overall width of 10.00 m. The drawn wall positions correspond to 10.00 m, so the chain segments are wrong, not the total."
+    },
+    {
+      "kind": "segment dimension inconsistent with drawn geometry",
+      "labeled_value": 5.86,
+      "unit": "m",
+      "comparison_value": 5.68,
+      "element": "Clear width of WOHNEN (first interior segment of the top dimension chain)",
+      "explanation": "Scaled off the drawing at 1:100, the clear span between the inner face of the left exterior wall and the partition is about 5.68 m, not 5.86 m (looks like a digit transposition). 5.68 + 0.115 + 3.60 + 0.30 + 0.30 closes exactly on the stated 10.00 m."
+    },
+    {
+      "kind": "segment dimension inconsistent with drawn geometry",
+      "labeled_value": 4,
+      "unit": "m",
+      "comparison_value": 3.6,
+      "element": "Clear width of the SCHLAFEN/BAD zone (third interior segment of the top dimension chain)",
+      "explanation": "The right-hand zone measures about 3.60 m clear on the drawing, not 4.00 m. Together with the 5.86 error this is what pushes the chain 0.575 m over the overall dimension."
+    },
+    {
+      "kind": "room area label does not match room dimensions",
+      "labeled_value": 31.2,
+      "unit": "m2",
+      "comparison_value": 36.4,
+      "element": "WOHNEN area label",
+      "explanation": "Interior height is 7.00 - 2 x 0.30 = 6.40 m. With the drawn width of ~5.68 m the room is ~36.4 m2 (and ~37.5 m2 if the printed 5.86 m were used). The printed 31.2 m2 is roughly 5 m2 too small under any reading."
+    },
+    {
+      "kind": "room area label does not match room dimensions",
+      "labeled_value": 13.4,
+      "unit": "m2",
+      "comparison_value": 14.2,
+      "element": "SCHLAFEN area label",
+      "explanation": "As drawn the bedroom is about 3.60 m x 3.95 m = 14.2 m2 (about 15.8 m2 if the printed 4.00 m width were used). The printed 13.4 m2 matches neither."
+    },
+    {
+      "kind": "room area label does not match room dimensions",
+      "labeled_value": 6.9,
+      "unit": "m2",
+      "comparison_value": 8.4,
+      "element": "BAD area label",
+      "explanation": "As drawn the bathroom is about 3.60 m x 2.33 m = 8.4 m2 (about 9.3 m2 with the printed 4.00 m width). The printed 6.9 m2 is roughly 1.5 m2 too small."
+    },
+    {
+      "kind": "sum of room areas inconsistent with enclosed floor area",
+      "labeled_value": 51.5,
+      "unit": "m2",
+      "comparison_value": 59,
+      "element": "WOHNEN 31.2 + SCHLAFEN 13.4 + BAD 6.9 vs. net area inside the exterior walls",
+      "explanation": "The envelope encloses 9.285 m x 6.40 m = 59.4 m2 of interior, less ~0.4 m2 for the horizontal partition, i.e. ~59 m2. The three labels total only 51.5 m2, leaving ~7.5 m2 unaccounted for with no circulation or other space on the plan to absorb it."
+    },
+    {
+      "kind": "bathroom access / door geometry",
+      "labeled_value": null,
+      "unit": "unknown",
+      "comparison_value": null,
+      "element": "Door between SCHLAFEN and BAD; no opening in BAD's other walls",
+      "explanation": "BAD shows no opening off WOHNEN; its only door sits in the SCHLAFEN/BAD partition, so the bathroom is only reachable through the bedroom. The swing arc also scales to roughly 1.5 m radius, far wider than a normal 0.80-0.90 m leaf (compare the bedroom door, which scales to ~0.85 m). Clarify the intended door position and width before issue."
+    }
+  ],
+  "items_checked": 20,
+  "scale": "1:100",
+  "summary": "The top dimension chain does not close: 0.30 + 5.86 + 0.115 + 4.00 + 0.30 = 10.575 m against the stated overall of 10.00 m, and scaling the drawing shows the two interior segments are really about 5.68 m and 3.60 m. All three room areas are also understated relative to the drawn rooms (WOHNEN ~36.4 vs 31.2, SCHLAFEN ~14.2 vs 13.4, BAD ~8.4 vs 6.9 m2), and the labels total 51.5 m2 against ~59 m2 of net enclosed floor area. Separately, BAD is only accessible through SCHLAFEN and its door swing scales to about 1.5 m wide, which should be confirmed before the plan is issued."
+}

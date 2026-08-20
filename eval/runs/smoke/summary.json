@@ -1,0 +1,245 @@
+[
+  {
+    "task": "dimcheck",
+    "condition": "naive",
+    "n_runs": 1,
+    "n_scored": 1,
+    "n_parsed": 1,
+    "n_errors": 0,
+    "pass_rate": 1.0,
+    "score_mean": 0.81,
+    "score_std": 0.0,
+    "score_min": 0.81,
+    "score_max": 0.81,
+    "cost_usd_mean": 0.546,
+    "cost_usd_std": 0.0,
+    "cost_usd_total": 0.546,
+    "duration_s_mean": 81.669,
+    "turns_mean": 2.0,
+    "tool_calls_mean": 1.0,
+    "images_viewed_mean": 0.0,
+    "plan_tools_usage": {},
+    "models": [
+      "claude-haiku-4-5-20251001",
+      "claude-opus-5[1m]"
+    ],
+    "found_primary_rate": 1.0,
+    "found_primary_or_label_rate": 1.0,
+    "found_chain_sum_rate": 1.0,
+    "found_living_5.86_rate": 0.0,
+    "false_positives_mean": 0.0,
+    "runs_with_false_positives": 0,
+    "other_observations_mean": 0.0,
+    "primary_abs_error_m_mean": 0.045,
+    "primary_measured_values": [
+      3.44
+    ],
+    "n_findings_values": [
+      4
+    ],
+    "answer_agreement": 1.0,
+    "answer_mode": [
+      "area_bad",
+      "area_wohnen",
+      "bedroom_4.00",
+      "chain_sum",
+      "FP=0"
+    ],
+    "answer_distinct": 1
+  },
+  {
+    "task": "dimcheck",
+    "condition": "tools",
+    "n_runs": 1,
+    "n_scored": 1,
+    "n_parsed": 1,
+    "n_errors": 0,
+    "pass_rate": 1.0,
+    "score_mean": 1.0,
+    "score_std": 0.0,
+    "score_min": 1.0,
+    "score_max": 1.0,
+    "cost_usd_mean": 2.612,
+    "cost_usd_std": 0.0,
+    "cost_usd_total": 2.612,
+    "duration_s_mean": 188.887,
+    "turns_mean": 13.0,
+    "tool_calls_mean": 0.0,
+    "images_viewed_mean": 0.0,
+    "plan_tools_usage": {},
+    "models": [
+      "claude-haiku-4-5-20251001",
+      "claude-opus-5[1m]"
+    ],
+    "found_primary_rate": 1.0,
+    "found_primary_or_label_rate": 1.0,
+    "found_chain_sum_rate": 1.0,
+    "found_living_5.86_rate": 1.0,
+    "false_positives_mean": 0.0,
+    "runs_with_false_positives": 0,
+    "other_observations_mean": 0.0,
+    "primary_abs_error_m_mean": 0.0,
+    "primary_measured_values": [
+      3.485
+    ],
+    "n_findings_values": [
+      6
+    ],
+    "answer_agreement": 1.0,
+    "answer_mode": [
+      "area_bad",
+      "area_schlafen",
+      "area_wohnen",
+      "bedroom_4.00",
+      "chain_sum",
+      "living_5.86",
+      "FP=0"
+    ],
+    "answer_distinct": 1
+  },
+  {
+    "task": "takeoff",
+    "condition": "tools",
+    "n_runs": 1,
+    "n_scored": 1,
+    "n_parsed": 1,
+    "n_errors": 0,
+    "pass_rate": 1.0,
+    "score_mean": 1.0,
+    "score_std": 0.0,
+    "score_min": 1.0,
+    "score_max": 1.0,
+    "cost_usd_mean": 3.885,
+    "cost_usd_std": 0.0,
+    "cost_usd_total": 3.885,
+    "duration_s_mean": 389.232,
+    "turns_mean": 28.0,
+    "tool_calls_mean": 25.0,
+    "images_viewed_mean": 4.0,
+    "plan_tools_usage": {
+      "zoom": 4
+    },
+    "models": [
+      "claude-haiku-4-5-20251001",
+      "claude-opus-5[1m]"
+    ],
+    "interpretations": {
+      "ceiling_only": 1
+    },
+    "interpretation_agreement": 1.0,
+    "interpretation_mode": "ceiling_only",
+    "sidewall_noted_rate": 1.0,
+    "total_exact_rate": 1.0,
+    "total_within_2_rate": 1.0,
+    "totals_reported": [
+      "28/28"
+    ],
+    "count_exact_frac_mean": 1.0,
+    "count_abs_error_sum_mean": 0.0,
+    "type_jaccard_mean": 1.0,
+    "size_ok_frac_mean": 1.0,
+    "model_ok_frac_mean": 1.0,
+    "false_positive_rate": 0.0,
+    "false_positive_tags_seen": {},
+    "explicit_exclusion_rate": 0.0,
+    "cross_verified_rate": 1.0,
+    "cfm_ok_rate": 1.0,
+    "answer_agreement": 1.0,
+    "answer_mode": [
+      5,
+      4,
+      15,
+      1,
+      null,
+      null,
+      3
+    ],
+    "answer_distinct": 1,
+    "per_tag": {
+      "A": {
+        "expected": 5,
+        "reported": [
+          5
+        ],
+        "exact_rate": 1.0,
+        "agreement": 1.0,
+        "mode": 5,
+        "distinct": 1,
+        "std": 0.0,
+        "size_ok_rate": 1.0
+      },
+      "B": {
+        "expected": 4,
+        "reported": [
+          4
+        ],
+        "exact_rate": 1.0,
+        "agreement": 1.0,
+        "mode": 4,
+        "distinct": 1,
+        "std": 0.0,
+        "size_ok_rate": 1.0
+      },
+      "C": {
+        "expected": 15,
+        "reported": [
+          15
+        ],
+        "exact_rate": 1.0,
+        "agreement": 1.0,
+        "mode": 15,
+        "distinct": 1,
+        "std": 0.0,
+        "size_ok_rate": 1.0
+      },
+      "D": {
+        "expected": 1,
+        "reported": [
+          1
+        ],
+        "exact_rate": 1.0,
+        "agreement": 1.0,
+        "mode": 1,
+        "distinct": 1,
+        "std": 0.0,
+        "size_ok_rate": 1.0
+      },
+      "H": {
+        "expected": 3,
+        "reported": [
+          null
+        ],
+        "exact_rate": 0.0,
+        "agreement": null,
+        "mode": null,
+        "distinct": 0,
+        "std": null,
+        "size_ok_rate": 0.0
+      },
+      "I": {
+        "expected": 4,
+        "reported": [
+          null
+        ],
+        "exact_rate": 0.0,
+        "agreement": null,
+        "mode": null,
+        "distinct": 0,
+        "std": null,
+        "size_ok_rate": 0.0
+      },
+      "J": {
+        "expected": 3,
+        "reported": [
+          3
+        ],
+        "exact_rate": 1.0,
+        "agreement": 1.0,
+        "mode": 3,
+        "distinct": 1,
+        "std": 0.0,
+        "size_ok_rate": 1.0
+      }
+    }
+  }
+]

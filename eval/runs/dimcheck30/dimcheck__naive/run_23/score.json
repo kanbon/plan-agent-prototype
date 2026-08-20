@@ -1,0 +1,61 @@
+{
+  "task": "dimcheck",
+  "parsed": true,
+  "found_primary": false,
+  "found_primary_label_only": false,
+  "primary_measured_m": null,
+  "primary_abs_error_m": null,
+  "found_living_5.86": false,
+  "found_chain_sum": true,
+  "found_door_swing": true,
+  "area_findings": 3,
+  "other_observations": 0,
+  "false_positives": 4,
+  "flagged_correct_dimensions": [
+    "overall depth",
+    "inner wall"
+  ],
+  "n_findings": 11,
+  "dimensions_checked": 21,
+  "scale_ok": true,
+  "matched_ids": [
+    "area_bad",
+    "area_schlafen",
+    "area_wohnen",
+    "chain_sum",
+    "door_swing",
+    "living_5.86?"
+  ],
+  "unmatched": [
+    {
+      "kind": "areas do not fill the available depth",
+      "labeled": 6.4,
+      "unit": "m",
+      "comparison": 5.19,
+      "element": "SCHLAFEN + BAD stack in the right bay"
+    },
+    {
+      "kind": "area balance does not close against gross footprint",
+      "labeled": 70,
+      "unit": "m2",
+      "comparison": 62.5,
+      "element": "Sum of all room areas plus wall footprint vs. 10.00 x 7.00 building"
+    },
+    {
+      "kind": "overall dimension inconsistent with drawn size",
+      "labeled": 7,
+      "unit": "m",
+      "comparison": 6.75,
+      "element": "Left vertical overall dimension"
+    },
+    {
+      "kind": "unit convention not annotated",
+      "labeled": 11.5,
+      "unit": "cm",
+      "comparison": null,
+      "element": "Dimension chain values 30, 11.5, 30"
+    }
+  ],
+  "score": 0.0,
+  "pass": false
+}

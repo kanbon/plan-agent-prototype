@@ -1,0 +1,47 @@
+{
+  "task": "dimcheck",
+  "parsed": true,
+  "found_primary": true,
+  "found_primary_label_only": false,
+  "primary_measured_m": 3.5,
+  "primary_abs_error_m": 0.015000000000000124,
+  "found_living_5.86": false,
+  "found_chain_sum": true,
+  "found_door_swing": true,
+  "area_findings": 3,
+  "other_observations": 0,
+  "false_positives": 2,
+  "flagged_correct_dimensions": [
+    "inner wall",
+    "overall depth"
+  ],
+  "n_findings": 9,
+  "dimensions_checked": 19,
+  "scale_ok": true,
+  "matched_ids": [
+    "area_bad",
+    "area_sum",
+    "area_wohnen",
+    "bedroom_4.00",
+    "chain_sum",
+    "door_swing"
+  ],
+  "unmatched": [
+    {
+      "kind": "inconsistent / missing unit in dimension string",
+      "labeled": 11.5,
+      "unit": "unknown",
+      "comparison": 0.115,
+      "element": "Interior partition thickness in the width dimension chain"
+    },
+    {
+      "kind": "incomplete dimensioning",
+      "labeled": 7,
+      "unit": "m",
+      "comparison": null,
+      "element": "Left-hand vertical dimension line"
+    }
+  ],
+  "score": 0.62,
+  "pass": false
+}

@@ -1,0 +1,31 @@
+{
+  "task": "dimcheck",
+  "parsed": true,
+  "found_primary": false,
+  "found_primary_label_only": true,
+  "primary_measured_m": 3.6,
+  "primary_abs_error_m": 0.11500000000000021,
+  "found_living_5.86": false,
+  "found_chain_sum": true,
+  "found_door_swing": true,
+  "area_findings": 4,
+  "other_observations": 0,
+  "false_positives": 0,
+  "flagged_correct_dimensions": [],
+  "n_findings": 8,
+  "dimensions_checked": 20,
+  "scale_ok": true,
+  "matched_ids": [
+    "area_bad",
+    "area_schlafen",
+    "area_sum",
+    "area_wohnen",
+    "bedroom_4.00?",
+    "chain_sum",
+    "door_swing",
+    "living_5.86?"
+  ],
+  "unmatched": [],
+  "score": 0.5,
+  "pass": false
+}

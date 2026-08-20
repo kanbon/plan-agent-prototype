@@ -1,0 +1,79 @@
+{
+  "findings": [
+    {
+      "kind": "dimension chain does not sum to the overall dimension",
+      "labeled_value": 10,
+      "unit": "m",
+      "comparison_value": 10.575,
+      "element": "Top horizontal dimension line: 30 / 5.86 / 11.5 / 4.00 / 30 against overall 10.00",
+      "explanation": "Reading the intermediate values as 0.30 + 5.86 + 0.115 + 4.00 + 0.30 gives 10.575 m, which overruns the stated overall width of 10.00 m by 0.575 m. The chain must close on the overall dimension; at least one segment is wrong."
+    },
+    {
+      "kind": "segment dimension contradicts scaled geometry",
+      "labeled_value": 4,
+      "unit": "m",
+      "comparison_value": 3.5,
+      "element": "Right-hand segment of the width dimension chain (SCHLAFEN / BAD zone width)",
+      "explanation": "Scaled off the drawing at 1:100, the right-hand room zone measures about 3.5 m clear, not 4.00 m. Closing the chain arithmetically (9.40 m clear inside − 5.86 m WOHNEN − 0.115 m partition) gives 3.43 m. This is the segment that makes the chain overrun; it should read roughly 3.43–3.45."
+    },
+    {
+      "kind": "inconsistent / missing unit in dimension string",
+      "labeled_value": 11.5,
+      "unit": "unknown",
+      "comparison_value": 0.115,
+      "element": "Interior partition thickness in the width dimension chain",
+      "explanation": "The chain mixes notations: 30 and 30 are evidently centimetres, 5.86 and 4.00 are metres, and 11.5 carries no unit at all. Read as metres it is absurd (11.5 m); read as centimetres it is a non-standard partition thickness (11.5 cm). State it in the same unit as the rest of the chain and confirm the intended build-up (e.g. 0.10 or 0.125 m)."
+    },
+    {
+      "kind": "room area label does not match geometry",
+      "labeled_value": 31.2,
+      "unit": "m2",
+      "comparison_value": 37.5,
+      "element": "WOHNEN",
+      "explanation": "Clear interior depth is 7.00 − 2 × 0.30 = 6.40 m. With the labelled width of 5.86 m the area is 5.86 × 6.40 = 37.5 m2; scaling the room off the drawing gives ~37 m2. The printed 31.2 m2 is roughly 6 m2 too small and cannot be reconciled with any reading of the plan."
+    },
+    {
+      "kind": "room area label does not match geometry",
+      "labeled_value": 6.9,
+      "unit": "m2",
+      "comparison_value": 8,
+      "element": "BAD",
+      "explanation": "BAD spans the full width of the right-hand zone (~3.5 m, or 3.43 m if the chain is closed) by ~2.3 m depth, i.e. ~7.9–8.1 m2. 6.9 m2 is about 1 m2 too small. Cross-check: SCHLAFEN 13.4 m2 and BAD 6.9 m2 imply depth ratio 1.94, but the drawn depths are ~3.8 m and ~2.3 m, ratio 1.66 — the two labels are mutually inconsistent even before any width is assumed. SCHLAFEN 13.4 m2 is the one that matches the geometry, so BAD is the wrong label."
+    },
+    {
+      "kind": "area schedule does not reconcile with building envelope",
+      "labeled_value": 51.5,
+      "unit": "m2",
+      "comparison_value": 58.9,
+      "element": "Sum of all labelled room areas vs. net internal area",
+      "explanation": "Labelled areas total 31.2 + 13.4 + 6.9 = 51.5 m2. Net internal area is 9.40 × 6.40 = 60.16 m2 less the two internal partitions (~1.3 m2), i.e. ~58.9 m2. The 7.4 m2 shortfall is accounted for by the WOHNEN and BAD area errors above."
+    },
+    {
+      "kind": "missing door / access defect",
+      "labeled_value": null,
+      "unit": "unknown",
+      "comparison_value": null,
+      "element": "BAD — door openings in the WOHNEN/SCHLAFEN partition",
+      "explanation": "Two door swings are drawn, both in the vertical partition between WOHNEN and the right-hand zone, and both arcs sit above the SCHLAFEN/BAD dividing wall — i.e. both open into SCHLAFEN. No opening is shown in the wall enclosing BAD, so as drawn the bathroom has no access (or is only reachable through the bedroom). The lower door should be moved below the dividing wall so it serves BAD directly from WOHNEN."
+    },
+    {
+      "kind": "no openings shown in external walls",
+      "labeled_value": null,
+      "unit": "unknown",
+      "comparison_value": null,
+      "element": "External walls of WOHNEN and SCHLAFEN",
+      "explanation": "The only opening in the envelope is the entrance door at the bottom left of WOHNEN. No windows are drawn anywhere, so the habitable rooms (WOHNEN, SCHLAFEN) have no daylight or ventilation. Either the window openings were omitted from the drawing or the layout does not meet the requirement for habitable rooms."
+    },
+    {
+      "kind": "incomplete dimensioning",
+      "labeled_value": 7,
+      "unit": "m",
+      "comparison_value": null,
+      "element": "Left-hand vertical dimension line",
+      "explanation": "Only the overall depth of 7.00 m is dimensioned vertically. There is no chain giving the wall thicknesses or the SCHLAFEN/BAD split, so the contractor cannot set out the horizontal partition. Add a vertical chain (0.30 / SCHLAFEN depth / partition / BAD depth / 0.30) — scaled values are approximately 3.80 and 2.30 m clear."
+    }
+  ],
+  "items_checked": 19,
+  "scale": "1:100",
+  "summary": "The plan is not ready to issue: the width dimension chain overruns the stated 10.00 m overall by 0.575 m (the \"4.00\" segment scales at ~3.5 m and should be ~3.43 m), and two of the three room areas are wrong — WOHNEN should be ~37.5 m2 rather than 31.2, and BAD ~8.0 m2 rather than 6.9. SCHLAFEN at 13.4 m2 is the only area that reconciles with the geometry. Beyond the numbers, both drawn door swings sit in the WOHNEN/SCHLAFEN partition so BAD has no access, no windows are shown in the envelope, and there is no vertical dimension chain for setting out the SCHLAFEN/BAD split; the unitless \"11.5\" in the chain also needs to be expressed consistently with the rest of the dimensions."
+}

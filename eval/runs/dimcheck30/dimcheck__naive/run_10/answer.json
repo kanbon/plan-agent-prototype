@@ -1,0 +1,31 @@
+{
+  "scale": "1:100",
+  "items_checked": 16,
+  "findings": [
+    {
+      "kind": "dimension chain does not add up to overall dimension",
+      "labeled_value": 4,
+      "unit": "m",
+      "comparison_value": 3.43,
+      "element": "Top horizontal dimension chain, right-hand segment (SCHLAFEN/BAD room width)",
+      "explanation": "The chain reads 0.30 + 5.86 + 0.115 + 4.00 + 0.30 = 10.575 m, but the overall dimension above it says 10.00 m - an excess of 0.575 m. Scaled off the drawing the right-hand room is about 3.4 m wide, not 4.00 m. Closing the chain against 10.00 m gives 10.00 - 0.30 - 5.86 - 0.115 - 0.30 = 3.425 m, so the 4.00 label is the wrong one; the other segments match the geometry."
+    },
+    {
+      "kind": "room area label inconsistent with dimensions",
+      "labeled_value": 31.2,
+      "unit": "m2",
+      "comparison_value": 37.5,
+      "element": "WOHNEN area label",
+      "explanation": "WOHNEN is 5.86 m wide (per the chain, and matching the drawn width) and spans the full clear depth 7.00 - 2 x 0.30 = 6.40 m. 5.86 x 6.40 = 37.5 m2, about 6.3 m2 more than the printed 31.2 m2."
+    },
+    {
+      "kind": "room area label inconsistent with dimensions",
+      "labeled_value": 6.9,
+      "unit": "m2",
+      "comparison_value": 7.85,
+      "element": "BAD area label",
+      "explanation": "With the corrected room width of 3.43 m and the drawn clear depth of BAD (about 2.29 m, i.e. the 6.40 m clear depth less SCHLAFEN and the 0.115 m partition), the area is about 7.8-7.9 m2, not 6.9 m2. With the labelled 4.00 m width it would be larger still, so 6.9 m2 cannot be reconciled with any reading of the plan. SCHLAFEN at 13.4 m2 does check out against roughly 3.43 x 3.95 m."
+    }
+  ],
+  "summary": "Three inconsistencies: the top dimension chain overshoots the 10.00 m overall dimension by 0.575 m because the right-hand bay is labelled 4.00 m where the geometry gives 3.43 m; WOHNEN's 31.2 m2 should be about 37.5 m2 (5.86 x 6.40); and BAD's 6.9 m2 should be about 7.8 m2. SCHLAFEN's 13.4 m2, the 30 cm external walls, the 11.5 cm partition and the 7.00 m overall depth are consistent. Fix the 4.00 m segment first, since both area labels depend on that width, and re-issue before the plan goes to the contractor."
+}

@@ -1,0 +1,63 @@
+{
+  "findings": [
+    {
+      "kind": "dimension chain does not sum to overall dimension",
+      "labeled_value": 10.575,
+      "unit": "m",
+      "comparison_value": 10,
+      "element": "Bottom horizontal dimension chain (30 / 5.86 / 11,5 / 4.00 / 30) vs. overall dimension 10.00",
+      "explanation": "The sub-dimensions add up to 0.30 + 5.86 + 0.115 + 4.00 + 0.30 = 10.575 m, but the overall dimension above it says 10.00 m and the drawn building is exactly 10.000 m wide (283.46 pt at 1:100). The chain overshoots by 57.5 cm. The drawn geometry itself is consistent (0.30 + 5.80 + 0.115 + 3.485 + 0.30 = 10.000), so the two labels 5.86 and 4.00 are the culprits."
+    },
+    {
+      "kind": "dimension label does not match drawn geometry",
+      "labeled_value": 5.86,
+      "unit": "m",
+      "comparison_value": 5.8,
+      "element": "Second segment of the bottom dimension chain (clear width of WOHNEN)",
+      "explanation": "The dimension runs from the inner face of the left exterior wall (x = 121.89 pt) to the left face of the partition (x = 286.30 pt) = 164.41 pt = 5.800 m at 1:100. Label says 5.86 m, i.e. 6 cm too large. Looks like a transposed digit (5.80 -> 5.86)."
+    },
+    {
+      "kind": "dimension label does not match drawn geometry",
+      "labeled_value": 4,
+      "unit": "m",
+      "comparison_value": 3.485,
+      "element": "Fourth segment of the bottom dimension chain (clear width of SCHLAFEN / BAD zone)",
+      "explanation": "The dimension runs from the right face of the partition (x = 289.56 pt) to the inner face of the right exterior wall (x = 388.35 pt) = 98.79 pt = 3.485 m at 1:100. Label says 4.00 m, i.e. 51.5 cm too large. This is the main contributor to the chain not closing."
+    },
+    {
+      "kind": "room area label wrong",
+      "labeled_value": 31.2,
+      "unit": "m2",
+      "comparison_value": 37.12,
+      "element": "WOHNEN area annotation",
+      "explanation": "WOHNEN is bounded by inner wall faces x = 121.89..286.30 pt and y = 433.70..615.12 pt, i.e. 5.800 m x 6.400 m = 37.12 m2. The label says 31.2 m2, which is 5.9 m2 (16%) too small; it matches neither the drawn geometry nor the labelled dimensions (5.86 x 6.40 = 37.50 m2)."
+    },
+    {
+      "kind": "room area label wrong",
+      "labeled_value": 13.4,
+      "unit": "m2",
+      "comparison_value": 14.24,
+      "element": "SCHLAFEN area annotation",
+      "explanation": "SCHLAFEN is bounded by x = 289.56..388.35 pt and y = 433.70..549.50 pt, i.e. 3.485 m x 4.085 m = 14.24 m2. The label says 13.4 m2, 0.84 m2 (6%) too small. It is also inconsistent with the labelled 4.00 m width, which would give 16.34 m2."
+    },
+    {
+      "kind": "room area label wrong",
+      "labeled_value": 6.9,
+      "unit": "m2",
+      "comparison_value": 7.67,
+      "element": "BAD area annotation",
+      "explanation": "BAD is bounded by x = 289.56..388.35 pt and y = 552.76..615.12 pt, i.e. 3.485 m x 2.200 m = 7.67 m2. The label says 6.9 m2, 0.77 m2 (10%) too small. Also inconsistent with the labelled 4.00 m width, which would give 8.80 m2."
+    },
+    {
+      "kind": "door symbol inconsistent with wall opening",
+      "labeled_value": null,
+      "unit": "unknown",
+      "comparison_value": null,
+      "element": "Door between WOHNEN and SCHLAFEN, in the vertical partition",
+      "explanation": "The 1.00 m opening in the partition runs y = 504.57..532.91 pt, but the door leaf's closed position is drawn from the hinge at y = 504.57 pt upward to y = 476.22 pt, i.e. lying against solid wall on the opposite side of the hinge. The swing symbol is mirrored, so the leaf does not close into its own opening. The other two doors (entrance and SCHLAFEN/BAD) are drawn correctly, with the closed leaf inside the opening. The contractor cannot tell the intended hinge side or swing direction from this symbol."
+    }
+  ],
+  "items_checked": 21,
+  "scale": "1:100",
+  "summary": "The drawn geometry is clean and exactly to the stated 1:100 scale (10.000 x 7.000 m envelope, 30 cm exterior walls, 11.5 cm partition, all matching to under 0.5 mm), but the annotation layer does not match it. The bottom dimension chain overshoots the 10.00 m overall by 57.5 cm because two segments are mislabelled (5.86 should read 5.80, and 4.00 should read 3.49), and all three room area labels are too small relative to the drawn rooms (WOHNEN 31.2 vs 37.12 m2, SCHLAFEN 13.4 vs 14.24 m2, BAD 6.9 vs 7.67 m2) and are not consistent with each other or with any single alternative geometry. Additionally, the door symbol between WOHNEN and SCHLAFEN is mirrored so the leaf sits on solid wall rather than in its opening. Please fix the labels (or the geometry, if 5.86/4.00 were the intent) and reissue before this goes out; also note that BAD is reachable only through SCHLAFEN, which may be worth reviewing."
+}

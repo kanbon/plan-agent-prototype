@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+# 39 MB third-party bid set; download link in README (Setup)
+realplan.pdf
+# agent renders and page images inside eval runs are large and regenerable;
+# answers, scores, meta, transcripts and reports are committed
+eval/runs/*/*/*/work/
+eval/runs/*/*/*/pages/

@@ -1,0 +1,158 @@
+{
+  "supply_diffusers": [
+    {
+      "tag": "A",
+      "count": 5,
+      "size": "6\" round neck, 24x24 lay-in panel",
+      "model": "Price SCD",
+      "mount": "ceiling",
+      "cfm_values": [
+        75,
+        75,
+        75,
+        90,
+        130
+      ]
+    },
+    {
+      "tag": "B",
+      "count": 4,
+      "size": "8\" round neck, 24x24 lay-in panel",
+      "model": "Price SCD",
+      "mount": "ceiling",
+      "cfm_values": [
+        150,
+        150,
+        140,
+        140
+      ]
+    },
+    {
+      "tag": "C",
+      "count": 15,
+      "size": "10\" round neck, 24x24 lay-in panel",
+      "model": "Price SCD",
+      "mount": "ceiling",
+      "cfm_values": [
+        250,
+        200,
+        250,
+        250,
+        250,
+        200,
+        350,
+        350,
+        350,
+        300,
+        375,
+        375,
+        300,
+        375,
+        375
+      ]
+    },
+    {
+      "tag": "D",
+      "count": 1,
+      "size": "12\" round neck, 24x24 lay-in panel",
+      "model": "Price SCD",
+      "mount": "ceiling",
+      "cfm_values": [
+        500
+      ]
+    },
+    {
+      "tag": "J",
+      "count": 3,
+      "size": "12x12 face, 8\" round neck (surface mount, flanged frame)",
+      "model": "Price SMD",
+      "mount": "ceiling",
+      "cfm_values": [
+        175,
+        150,
+        150
+      ]
+    },
+    {
+      "tag": "H",
+      "count": 3,
+      "size": "18x8",
+      "model": "Price 520D",
+      "mount": "sidewall",
+      "cfm_values": [
+        550,
+        550,
+        550
+      ]
+    },
+    {
+      "tag": "I",
+      "count": 4,
+      "size": "14x8 (field verify size before ordering)",
+      "model": "Price 520D",
+      "mount": "sidewall",
+      "cfm_values": [
+        450,
+        450,
+        450,
+        450
+      ]
+    }
+  ],
+  "supply_diffuser_total": 35,
+  "return_exhaust_grilles": [
+    {
+      "tag": "F",
+      "count": 3,
+      "size": "24\" x 24\" core (1/2\"x1/2\"x1/2\" aluminum eggcrate, core-only panel, lay-in ceiling) - Price 80, white"
+    },
+    {
+      "tag": "E",
+      "count": 4,
+      "size": "30x18 sidewall return (field verify size before ordering) - Price 95, primecoat"
+    },
+    {
+      "tag": "G",
+      "count": 4,
+      "size": "36x36 sidewall transfer grille, top elev. 14'-8\" AFF - Price 95, primecoat"
+    },
+    {
+      "tag": "(untagged, M101 keynote 19)",
+      "count": 1,
+      "size": "14x14 eggcrate in soffit with insect screen on backside - Price 82"
+    }
+  ],
+  "exhaust_fans": [
+    {
+      "tag": "EF-1",
+      "model": "Greenheck SPA-700 (ceiling centrifugal, integral grille, motion sensor)",
+      "cfm": 450
+    },
+    {
+      "tag": "EF-2",
+      "model": "Greenheck SPA-700 (ceiling centrifugal, integral grille, motion sensor)",
+      "cfm": 450
+    },
+    {
+      "tag": "EF-3",
+      "model": "Greenheck SP-B90 (ceiling centrifugal, integral grille, motion sensor)",
+      "cfm": 75
+    }
+  ],
+  "total_supply_cfm": 10000,
+  "excluded_false_positives": [
+    "M101 'G' at (2073,608) near WH/KILN: gas piping line designator, not a grille tag - confirmed by zoom (line break with 'G' and a valve/meter symbol)",
+    "M101 'F' at (1615,354) and (1570,364): parts of room names 'TLT F 121' and 'SHOWERS F 122', not tags",
+    "M101 'D' at (1516,302): part of the 3/4\" D condensate drain callout, not a tag",
+    "M101: 3 hexagons containing only a CFM (450, 450, 75) with a dash in the tag field = EF-1/EF-2/EF-3 integral fan grilles - fans come with grilles, not bought separately",
+    "M101 single letters R / V / D elsewhere: piping designators per the M601 legend (refrigerant, vent, condensate drain)",
+    "MD101 grilles: existing devices removed or existing-to-remain (keynotes 8, 14, 16, 18, 20, 26, 42) - nothing purchased from that sheet"
+  ],
+  "sheets_used": [
+    "G0-0",
+    "MD101",
+    "M101",
+    "M601"
+  ],
+  "summary": "Buy 31 ceiling-mounted air devices for this renovation, all Price, per the GRILLES schedule on M601 and the tags on M101 (Mechanical New Work Floor Plan).\n\nCEILING SUPPLY DIFFUSERS - 28 total:\n- Tag A: 5 ea - Price SCD, 6\\\" round neck, white, 4-way (75/75/75/90/130 CFM)\n- Tag B: 4 ea - Price SCD, 8\\\" round neck, white, 4-way (150/150/140/140 CFM)\n- Tag C: 15 ea - Price SCD, 10\\\" round neck, white, 4-way (250,200,250,250,250,200,350,350,350,300,375,375,300,375,375 CFM)\n- Tag D: 1 ea - Price SCD, 12\\\" round neck, white, 4-way (500 CFM)\nA-D are louvered-face square 4-cone steel diffusers with full-faced louvers, factory insulated backpan, in 24x24 panels for lay-in ceiling, each with a radial balancing damper in the neck (Price VCR9 or equal). NC not to exceed 35.\n- Tag J: 3 ea - Price SMD, 12x12 face with 8\\\" round neck, white, 4-way, high-capacity louvered face, with opposed blade damper and flanged frame for surface mounting (175/150/150 CFM) - these are in the toilet/shower areas with hard ceilings.\n\nCEILING RETURN GRILLES - 3 total:\n- Tag F: 3 ea - Price 80, 24\\\" x 24\\\" core, white, 1/2\\\"x1/2\\\"x1/2\\\" all-aluminum eggcrate, core-only panel for 24x24 lay-in grid, no damper. The two in MTG ROOM 106 get a new 24x24 lined (1\\\" liner) plenum on top (keynote 4).\n\nCeiling supply air totals 6,550 CFM.\n\nALSO ON THE SAME ORDER, but WALL-mounted not ceiling (15 ea):\n- Tag E: 4 ea Price 95, 30x18 return, primecoat (MP Room 112) - marked * = field-verify exact size before ordering\n- Tag G: 4 ea Price 95, 36x36 transfer grille, primecoat, top elevation 14'-8\\\" AFF\n- Tag H: 3 ea Price 520D, 18x8 double-deflection supply, primecoat, with OBD (550 CFM ea)\n- Tag I: 4 ea Price 520D, 14x8 double-deflection sidewall supply, primecoat, with OBD (450 CFM ea) - marked * = field verify size\nE, G, H and I are primecoat only and receive 2 coats of field paint - verify color with the architect. Total supply air across all 35 supply devices is exactly 10,000 CFM.\n\nTWO MORE ITEMS:\n- 1 ea 14x14 eggcrate, Price model 82, mounted in the soffit with insect screen on the backside - outside-air intake, M101 keynote 19. It carries no letter tag.\n- EF-1, EF-2 (Greenheck SPA-700, 450 CFM ea) and EF-3 (Greenheck SP-B90, 75 CFM) are ceiling exhaust fans supplied with an integral grille and factory grille-mounted motion sensor - do NOT order separate ceiling grilles for these three locations.\n\nHOW I VERIFIED IT: I counted the hexagonal device tags on M101 geometrically - 49 hexagons, of which 46 carry a letter tag (A5, B4, C15, D1, E4, F3, G4, H3, I4, J3) and 3 carry only a CFM (the EF integral-grille tags). The supply CFM sums to exactly 10,000, which confirms nothing was missed or double-counted. MD101 (demolition) adds nothing to buy - it only removes existing grilles or leaves them in place.\n\nWATCH OUT FOR: coordinate all ceiling device locations with the lighting layout, sprinkler heads and ceiling grid per architectural RCP A6-1 (M601 general note 3), and field-verify sizes on the E and I grilles before ordering."
+}

@@ -1,0 +1,63 @@
+{
+  "scale": "1:100",
+  "items_checked": 24,
+  "findings": [
+    {
+      "kind": "dimension label contradicts drawn length",
+      "labeled_value": 5.86,
+      "unit": "m",
+      "comparison_value": 5.8,
+      "element": "Lower dimension chain, second segment (interior width of WOHNEN, between inner face of left exterior wall and left face of the vertical partition)",
+      "explanation": "The drawn segment runs from x=121.89 pt to x=286.30 pt = 164.41 pt. At 1:100 (1 pt = 0.035278 m) that is 5.800 m, not 5.86 m. The overall dimension 10.00 m and the outer shell (283.46 pt = 10.000 m) both confirm the drawing, so the label is the error."
+    },
+    {
+      "kind": "dimension label contradicts drawn length",
+      "labeled_value": 4,
+      "unit": "m",
+      "comparison_value": 3.485,
+      "element": "Lower dimension chain, fourth segment (interior width of SCHLAFEN / BAD zone, between the vertical partition and inner face of right exterior wall)",
+      "explanation": "The drawn segment runs from x=289.56 pt to x=388.35 pt = 98.79 pt = 3.485 m at 1:100. Labeled 4.00 m, an overstatement of 0.515 m."
+    },
+    {
+      "kind": "dimension chain does not sum to the stated overall dimension",
+      "labeled_value": 10.575,
+      "unit": "m",
+      "comparison_value": 10,
+      "element": "Lower dimension chain (30 + 5.86 + 11,5 + 4.00 + 30) versus the overall dimension line above it (10.00)",
+      "explanation": "The five printed sub-dimensions add up to 0.30 + 5.86 + 0.115 + 4.00 + 0.30 = 10.575 m, but the overall dimension line reads 10.00 m and the building is drawn 10.000 m wide. The chain is over by 0.575 m. Correcting the two wrong segments (5.86 -> 5.80 and 4.00 -> 3.485) makes the chain close at exactly 10.00 m."
+    },
+    {
+      "kind": "room area label understated",
+      "labeled_value": 31.2,
+      "unit": "m2",
+      "comparison_value": 37.12,
+      "element": "WOHNEN room area annotation",
+      "explanation": "Clear internal dimensions of WOHNEN are 5.800 m (x 121.89-286.30 pt) by 6.400 m (y 433.70-615.12 pt), giving 37.12 m2. The label reads 31.2 m2, short by 5.9 m2. Cross-check: total area inside the exterior walls is 9.40 x 6.40 = 60.16 m2, and 37.12 + 14.24 + 7.67 + partition strips (0.74 + 0.40) = 60.17 m2."
+    },
+    {
+      "kind": "room area label understated",
+      "labeled_value": 13.4,
+      "unit": "m2",
+      "comparison_value": 14.24,
+      "element": "SCHLAFEN room area annotation",
+      "explanation": "Clear internal dimensions of SCHLAFEN are 3.485 m (x 289.56-388.35 pt) by 4.085 m (y 433.70-549.50 pt), giving 14.24 m2, not 13.4 m2."
+    },
+    {
+      "kind": "room area label understated",
+      "labeled_value": 6.9,
+      "unit": "m2",
+      "comparison_value": 7.67,
+      "element": "BAD room area annotation",
+      "explanation": "Clear internal dimensions of BAD are 3.485 m (x 289.56-388.35 pt) by 2.200 m (y 552.76-615.12 pt), giving 7.67 m2, not 6.9 m2. Check: SCHLAFEN 14.24 + partition 0.40 + BAD 7.67 = 22.31 m2 = 3.485 x 6.40, so the right-hand zone is fully accounted for."
+    },
+    {
+      "kind": "door swing symbol does not match its wall opening",
+      "labeled_value": null,
+      "unit": "unknown",
+      "comparison_value": 1,
+      "element": "SCHLAFEN door in the vertical partition wall (x = 286.30-289.56 pt)",
+      "explanation": "The opening cut in the partition spans y = 504.57-532.91 pt (1.00 m). The door leaf and swing arc are hinged at y = 504.57 pt but drawn on the opposite side, covering y = 476.22-504.57 pt. The leaf therefore closes against solid wall and the 1.00 m opening is left unclosed; the symbol is mirrored about the hinge and sits 1.00 m off. The BAD door (opening x 295.23-320.74 pt, leaf x 295.23-320.74 pt) and the entrance door (opening and leaf both x 147.40-175.75 pt) are drawn correctly, confirming the intended convention."
+    }
+  ],
+  "summary": "The drawn geometry is sound and scales exactly at 1:100 — the shell measures 10.00 x 7.00 m, exterior walls 30 cm and partitions 11.5 cm — so the annotations are what need fixing, not the linework. Six issues: two dimension-chain segments are mislabelled (5.86 should be 5.80, 4.00 should be 3.485), which is why the chain sums to 10.575 m instead of the 10.00 m overall dimension; all three room areas are understated (WOHNEN 31.2 vs 37.12, SCHLAFEN 13.4 vs 14.24, BAD 6.9 vs 7.67 m2); and the SCHLAFEN door swing is mirrored about its hinge so the leaf closes against solid wall while the 1.00 m opening stays open. Please correct these before issuing to the contractor, as the area figures and the SCHLAFEN opening would both be built wrong as drawn."
+}

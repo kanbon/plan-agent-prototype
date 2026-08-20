@@ -1,0 +1,63 @@
+{
+  "findings": [
+    {
+      "kind": "dimension label contradicts geometry",
+      "labeled_value": 5.86,
+      "unit": "m",
+      "comparison_value": 5.8,
+      "element": "Top dimension chain, 2nd segment (WOHNEN clear width, from x=121.89 to x=286.30 pt)",
+      "explanation": "The dimension line ticks span 164.41 pt, which at the stated 1:100 scale is exactly 5.800 m, not 5.86 m. The same 5.80 m is confirmed by the WOHNEN room's inner faces (interior width 9.40 m = 5.80 + 0.115 + 3.485)."
+    },
+    {
+      "kind": "dimension label contradicts geometry",
+      "labeled_value": 4,
+      "unit": "m",
+      "comparison_value": 3.485,
+      "element": "Top dimension chain, 4th segment (SCHLAFEN/BAD clear width, from x=289.56 to x=388.35 pt)",
+      "explanation": "The dimension line ticks span 98.79 pt = 3.485 m at 1:100, not 4.00 m — a 51.5 cm discrepancy. This is the widest single error on the sheet and would mis-size the whole right-hand zone if built."
+    },
+    {
+      "kind": "dimension chain does not sum to overall dimension",
+      "labeled_value": 10.575,
+      "unit": "m",
+      "comparison_value": 10,
+      "element": "Top dimension chain (30 + 5.86 + 11.5 + 4.00 + 30) vs. the overall 10.00 dimension above it",
+      "explanation": "The five sub-dimensions as printed add up to 0.30 + 5.86 + 0.115 + 4.00 + 0.30 = 10.575 m, but the overall dimension line directly above says 10.00 m and the drawn building is 10.000 m wide. The chain is internally inconsistent by 57.5 cm; the geometry sums correctly (0.30 + 5.80 + 0.115 + 3.485 + 0.30 = 10.00), so it is the two labels that are wrong."
+    },
+    {
+      "kind": "room area label wrong",
+      "labeled_value": 31.2,
+      "unit": "m2",
+      "comparison_value": 37.12,
+      "element": "WOHNEN room area annotation",
+      "explanation": "Clear internal dimensions of WOHNEN are 5.800 m x 6.400 m = 37.12 m2, not 31.2 m2. Looks like a digit transposition of 37.1; understates the room by ~19%."
+    },
+    {
+      "kind": "room area label wrong",
+      "labeled_value": 13.4,
+      "unit": "m2",
+      "comparison_value": 14.24,
+      "element": "SCHLAFEN room area annotation",
+      "explanation": "Clear internal dimensions of SCHLAFEN are 3.485 m x 4.085 m = 14.24 m2, not 13.4 m2."
+    },
+    {
+      "kind": "room area label wrong",
+      "labeled_value": 6.9,
+      "unit": "m2",
+      "comparison_value": 7.67,
+      "element": "BAD room area annotation",
+      "explanation": "Clear internal dimensions of BAD are 3.485 m x 2.200 m = 7.67 m2, not 6.9 m2. (Note: none of the three area labels is consistent with any single reading of the dimension chain, so the area schedule needs to be regenerated after the widths are fixed.)"
+    },
+    {
+      "kind": "door symbol does not match wall opening",
+      "labeled_value": null,
+      "unit": "unknown",
+      "comparison_value": null,
+      "element": "Door between WOHNEN and SCHLAFEN, in the 11.5 cm partition at x=286.30-289.56 pt",
+      "explanation": "The 1.00 m wide opening in the partition runs from y=504.57 to y=532.91 pt, but the door leaf and swing arc are drawn on the other side of the hinge, from y=504.57 up to y=476.22 pt. The closed leaf therefore lies against solid wall while the actual opening stays uncovered — the door symbol is mirrored/offset by one leaf width (1.00 m). Either the opening or the door symbol must be moved."
+    }
+  ],
+  "items_checked": 22,
+  "scale": "1:100",
+  "summary": "Seven errors, all confirmed against the vector geometry at the sheet's true 1:100 scale. Two dimension labels in the top chain are wrong (5.86 should be 5.80, 4.00 should be 3.485), which is why the chain sums to 10.575 m against the 10.00 m overall dimension — the drawn building is genuinely 10.000 x 7.000 m, so the labels are at fault, not the geometry. All three room areas are also misstated (WOHNEN 31.2 vs 37.12, SCHLAFEN 13.4 vs 14.24, BAD 6.9 vs 7.67 m2) and none of them reconciles with any single reading of the chain, so the area schedule should be regenerated once the widths are fixed. Finally, the WOHNEN/SCHLAFEN door symbol is mirrored about its hinge: the leaf and arc sit 1.00 m above the actual wall opening. Please also confirm two design points that are drawn consistently but may be unintended: BAD is only reachable through SCHLAFEN, and the plan shows no windows at all."
+}

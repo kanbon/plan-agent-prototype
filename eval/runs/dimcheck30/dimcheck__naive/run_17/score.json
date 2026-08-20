@@ -1,0 +1,45 @@
+{
+  "task": "dimcheck",
+  "parsed": true,
+  "found_primary": false,
+  "found_primary_label_only": true,
+  "primary_measured_m": 3.43,
+  "primary_abs_error_m": 0.054999999999999716,
+  "found_living_5.86": false,
+  "found_chain_sum": true,
+  "found_door_swing": true,
+  "area_findings": 2,
+  "other_observations": 0,
+  "false_positives": 2,
+  "flagged_correct_dimensions": [
+    "inner wall"
+  ],
+  "n_findings": 7,
+  "dimensions_checked": 16,
+  "scale_ok": true,
+  "matched_ids": [
+    "area_sum",
+    "area_wohnen",
+    "bedroom_4.00?",
+    "chain_sum",
+    "door_swing"
+  ],
+  "unmatched": [
+    {
+      "kind": "room areas do not fill the available building depth",
+      "labeled": null,
+      "unit": "m2",
+      "comparison": 6.4,
+      "element": "SCHLAFEN (13.4 m2) + BAD (6.9 m2) stacked in the right-hand zone"
+    },
+    {
+      "kind": "inconsistent / missing units in dimension chain",
+      "labeled": 11.5,
+      "unit": "unknown",
+      "comparison": 0.115,
+      "element": "Dimension chain, partition wall segment '11.5'"
+    }
+  ],
+  "score": 0.2,
+  "pass": false
+}

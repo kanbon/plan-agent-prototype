@@ -1,0 +1,55 @@
+{
+  "scale": "1:100",
+  "items_checked": 16,
+  "findings": [
+    {
+      "kind": "dimension chain does not sum to total",
+      "labeled_value": 10,
+      "unit": "m",
+      "comparison_value": 10.575,
+      "element": "Top horizontal dimension line: overall 10.00 vs chain 30 / 5.86 / 11.5 / 4.00 / 30",
+      "explanation": "The sub-dimensions add up to 0.30 + 5.86 + 0.115 + 4.00 + 0.30 = 10.575 m, which contradicts the overall building dimension of 10.00 m printed above them. The chain is over by 0.575 m."
+    },
+    {
+      "kind": "single dimension inconsistent with drawn geometry",
+      "labeled_value": 4,
+      "unit": "m",
+      "comparison_value": 3.43,
+      "element": "Top dimension chain, segment over SCHLAFEN / BAD (right room block)",
+      "explanation": "Scaled off the drawing at 1:100 the right-hand room block measures about 3.43 m clear, not 4.00 m. 3.425 m is also the value that makes the chain close on 10.00 m (0.30 + 5.86 + 0.115 + 3.425 + 0.30) and the value implied by the SCHLAFEN area label (13.4 m2 / 3.95 m depth = 3.39 m). This looks like the single wrong figure in the chain."
+    },
+    {
+      "kind": "room area label wrong",
+      "labeled_value": 31.2,
+      "unit": "m2",
+      "comparison_value": 37.5,
+      "element": "WOHNEN area label",
+      "explanation": "Clear interior depth is 7.00 - 2 x 0.30 = 6.40 m and the room's clear width is the labelled 5.86 m, giving 5.86 x 6.40 = 37.5 m2. The printed 31.2 m2 is about 6.3 m2 too small and does not match the drawn extents."
+    },
+    {
+      "kind": "room area label wrong",
+      "labeled_value": 6.9,
+      "unit": "m2",
+      "comparison_value": 7.9,
+      "element": "BAD area label",
+      "explanation": "BAD scales at roughly 3.43 m wide x 2.32 m deep = about 7.9 m2. The printed 6.9 m2 is roughly 1 m2 short; note the depths check out (SCHLAFEN 3.95 m + partition 0.115 m + BAD 2.32 m = 6.40 m interior depth), so the geometry is right and the label is wrong."
+    },
+    {
+      "kind": "room areas do not reconcile with building footprint",
+      "labeled_value": 51.5,
+      "unit": "m2",
+      "comparison_value": 59.4,
+      "element": "Sum of the three room area labels vs net interior area",
+      "explanation": "Net interior area is (10.00 - 0.30 - 0.30) x 6.40 minus the internal partition (0.115 x 6.40) = about 59.4 m2, but the labelled rooms total only 31.2 + 13.4 + 6.9 = 51.5 m2. The ~7.9 m2 gap is accounted for by the two wrong area labels above."
+    },
+    {
+      "kind": "mixed / unmarked units in one dimension chain",
+      "labeled_value": 11.5,
+      "unit": "unknown",
+      "comparison_value": 0.115,
+      "element": "Top dimension chain: values 30, 11.5, 30 (cm) alongside 5.86, 4.00, 10.00 (m)",
+      "explanation": "Wall thicknesses are given in centimetres while room dimensions in the same chain are in metres, with no unit marks. Read literally, 11.5 next to 5.86 and 4.00 is nonsense. Write them as 0.30 / 0.115 / 0.30 or add unit annotations so the contractor cannot misread the partition thickness."
+    }
+  ],
+  "summary": "The 1:100 plan has one bad figure in the top dimension chain and two bad area labels. The chain sums to 10.575 m against a stated overall of 10.00 m; the 4.00 m segment is the culprit — the drawn geometry and the SCHLAFEN area both indicate about 3.43 m. WOHNEN should read ~37.5 m2 (not 31.2) and BAD ~7.9 m2 (not 6.9); with those corrections the room areas reconcile with the ~59.4 m2 net interior. Please also mark units in the dimension chain, which silently mixes centimetres and metres."
+}
